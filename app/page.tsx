@@ -21,6 +21,9 @@ export default function Home() {
           <a href="#architecture" className="transition hover:text-ink">
             Architecture
           </a>
+          <a href="/archive" className="transition hover:text-ink">
+            Archive
+          </a>
         </nav>
       </header>
 
