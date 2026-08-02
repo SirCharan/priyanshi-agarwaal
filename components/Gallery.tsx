@@ -2,24 +2,32 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { architecture, fashionPhotos, type Photo } from "@/lib/photos";
+import {
+  architecture,
+  fashionPhotos,
+  workoutPhotos,
+  type Photo,
+} from "@/lib/photos";
 
-type FilterId = "all" | "fashion" | "architecture";
+type FilterId = "all" | "fashion" | "architecture" | "workout";
 
 const filters: { id: FilterId; label: string }[] = [
   { id: "all", label: "All" },
   { id: "fashion", label: "Fashion" },
+  { id: "workout", label: "Workout" },
   { id: "architecture", label: "Architecture" },
 ];
 
 export default function Gallery({
   mode = "fashion",
 }: {
-  mode?: "fashion" | "architecture" | "all";
+  mode?: "fashion" | "architecture" | "workout" | "all";
 }) {
   const baseList = useMemo(() => {
     if (mode === "architecture") return architecture;
-    if (mode === "all") return [...fashionPhotos, ...architecture];
+    if (mode === "workout") return workoutPhotos;
+    if (mode === "all")
+      return [...fashionPhotos, ...workoutPhotos, ...architecture];
     return fashionPhotos;
   }, [mode]);
 

@@ -3,7 +3,7 @@ export type Photo = {
   src: string;
   title: string;
   place?: string;
-  tag: "fashion" | "architecture";
+  tag: "fashion" | "architecture" | "workout";
 };
 
 /** Fashion frames — original Imagine set + consistency expansion */
@@ -178,4 +178,72 @@ export const architecture: Photo[] = [
   },
 ];
 
+/** Identity-locked workout / fitness set (modest athletic wear) */
+export const workout: Photo[] = [
+  {
+    id: "wo-01",
+    src: "/images/workout/wo-01-run-profile.jpg",
+    title: "Run Profile",
+    place: "Outdoor · golden hour",
+    tag: "workout",
+  },
+  {
+    id: "wo-02",
+    src: "/images/workout/wo-02-gym-squat.jpg",
+    title: "Gym Squat",
+    place: "Dumbbells · long-sleeve set",
+    tag: "workout",
+  },
+  {
+    id: "wo-03",
+    src: "/images/workout/wo-03-outdoor-run.jpg",
+    title: "Park Run",
+    place: "Mid-stride · coral top",
+    tag: "workout",
+  },
+  {
+    id: "wo-04",
+    src: "/images/workout/wo-04-yoga-warrior.jpg",
+    title: "Yoga Warrior",
+    place: "Studio · sage set",
+    tag: "workout",
+  },
+  {
+    id: "wo-05",
+    src: "/images/workout/wo-05-boxing.jpg",
+    title: "Boxing Guard",
+    place: "Gym · navy training",
+    tag: "workout",
+  },
+  {
+    id: "wo-06",
+    src: "/images/workout/wo-06-cable-row.jpg",
+    title: "Cable Row",
+    place: "Strength · seated pull",
+    tag: "workout",
+  },
+  {
+    id: "wo-07",
+    src: "/images/workout/wo-07-stretch-hoodie.jpg",
+    title: "Cool-down Stretch",
+    place: "Hoodie · calf stretch",
+    tag: "workout",
+  },
+  {
+    id: "wo-08",
+    src: "/images/workout/wo-08-post-workout.jpg",
+    title: "Post-workout",
+    place: "Close · towel · soft smile",
+    tag: "workout",
+  },
+  {
+    id: "wo-09",
+    src: "/images/workout/wo-09-cycling.jpg",
+    title: "Cycling",
+    place: "Outdoor · road bike",
+    tag: "workout",
+  },
+];
+
 export const fashionPhotos = photos.filter((p) => p.tag === "fashion");
+export const workoutPhotos = workout;

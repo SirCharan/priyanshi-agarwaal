@@ -18,6 +18,9 @@ export default function Home() {
           <a href="#gallery" className="transition hover:text-ink">
             Gallery
           </a>
+          <a href="#workout" className="transition hover:text-ink">
+            Workout
+          </a>
           <a href="#architecture" className="transition hover:text-ink">
             Architecture
           </a>
@@ -101,6 +104,27 @@ export default function Home() {
             </p>
           </div>
           <Gallery mode="fashion" />
+        </div>
+      </section>
+
+      <section
+        id="workout"
+        className="border-t border-line/80 bg-bg-deep/40 py-16 sm:py-20"
+      >
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <div className="mb-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
+              Fitness
+            </p>
+            <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl tracking-tight text-ink sm:text-4xl">
+              Workout
+            </h2>
+            <p className="mt-3 max-w-lg text-sm leading-relaxed text-ink-soft">
+              Identity-locked training frames — gym, run, yoga, boxing, cycle —
+              same face and body, modest athletic wear.
+            </p>
+          </div>
+          <Gallery mode="workout" />
         </div>
       </section>
 
