@@ -1,23 +1,48 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
-import { photos, type Photo } from "@/lib/photos";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { architecture, fashionPhotos, type Photo } from "@/lib/photos";
 
-export default function Gallery() {
+type FilterId = "all" | "fashion" | "architecture";
+
+const filters: { id: FilterId; label: string }[] = [
+  { id: "all", label: "All" },
+  { id: "fashion", label: "Fashion" },
+  { id: "architecture", label: "Architecture" },
+];
+
+export default function Gallery({
+  mode = "fashion",
+}: {
+  mode?: "fashion" | "architecture" | "all";
+}) {
+  const baseList = useMemo(() => {
+    if (mode === "architecture") return architecture;
+    if (mode === "all") return [...fashionPhotos, ...architecture];
+    return fashionPhotos;
+  }, [mode]);
+
+  const showFilters = mode === "all";
+  const [filter, setFilter] = useState<FilterId>("all");
   const [active, setActive] = useState<Photo | null>(null);
+
+  const list = useMemo(() => {
+    if (!showFilters || filter === "all") return baseList;
+    return baseList.filter((p) => p.tag === filter);
+  }, [baseList, filter, showFilters]);
 
   const open = useCallback((photo: Photo) => setActive(photo), []);
   const close = useCallback(() => setActive(null), []);
 
   const step = useCallback(
     (dir: 1 | -1) => {
-      if (!active || photos.length === 0) return;
-      const i = photos.findIndex((p) => p.id === active.id);
+      if (!active || list.length === 0) return;
+      const i = list.findIndex((p) => p.id === active.id);
       if (i < 0) return;
-      setActive(photos[(i + dir + photos.length) % photos.length]);
+      setActive(list[(i + dir + list.length) % list.length]);
     },
-    [active],
+    [active, list],
   );
 
   useEffect(() => {
@@ -35,14 +60,11 @@ export default function Gallery() {
     };
   }, [active, close, step]);
 
-  if (photos.length === 0) {
+  if (list.length === 0) {
     return (
       <div className="rounded-sm border border-dashed border-line bg-card px-6 py-20 text-center">
         <p className="font-[family-name:var(--font-playfair)] text-2xl text-ink">
           Gallery coming soon
-        </p>
-        <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-ink-soft">
-          Images will appear here once they are added to the project.
         </p>
       </div>
     );
@@ -50,14 +72,39 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="mb-6 flex items-center justify-end">
-        <span className="text-sm text-muted tabular-nums">
-          {photos.length} frame{photos.length === 1 ? "" : "s"}
-        </span>
-      </div>
+      {showFilters ? (
+        <div className="mb-8 flex flex-wrap items-center gap-2">
+          {filters.map((f) => {
+            const on = filter === f.id;
+            return (
+              <button
+                key={f.id}
+                type="button"
+                onClick={() => setFilter(f.id)}
+                className={`cursor-pointer rounded-full border px-4 py-1.5 text-sm tracking-wide transition-colors duration-200 ${
+                  on
+                    ? "border-ink bg-ink text-bg"
+                    : "border-line bg-card text-ink-soft hover:border-ink/40"
+                }`}
+              >
+                {f.label}
+              </button>
+            );
+          })}
+          <span className="ml-auto text-sm text-muted tabular-nums">
+            {list.length} frames
+          </span>
+        </div>
+      ) : (
+        <div className="mb-6 flex items-center justify-end">
+          <span className="text-sm text-muted tabular-nums">
+            {list.length} frame{list.length === 1 ? "" : "s"}
+          </span>
+        </div>
+      )}
 
       <div className="masonry">
-        {photos.map((photo, i) => (
+        {list.map((photo, i) => (
           <button
             key={photo.id}
             type="button"
@@ -72,8 +119,8 @@ export default function Gallery() {
               <Image
                 src={photo.src}
                 alt={photo.title}
-                width={900}
-                height={1200}
+                width={photo.tag === "architecture" ? 1280 : 900}
+                height={photo.tag === "architecture" ? 720 : 1200}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="h-auto w-full object-cover transition duration-500 group-hover:scale-[1.02]"
               />
@@ -132,15 +179,15 @@ export default function Gallery() {
           </button>
 
           <figure
-            className="relative max-h-[90vh] w-full max-w-3xl"
+            className="relative max-h-[90vh] w-full max-w-4xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative mx-auto max-h-[78vh] overflow-hidden rounded-sm bg-black/40">
               <Image
                 src={active.src}
                 alt={active.title}
-                width={1200}
-                height={1600}
+                width={active.tag === "architecture" ? 1600 : 1200}
+                height={active.tag === "architecture" ? 900 : 1600}
                 priority
                 className="mx-auto max-h-[78vh] w-auto object-contain"
               />

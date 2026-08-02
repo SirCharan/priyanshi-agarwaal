@@ -1,9 +1,9 @@
 import Gallery from "@/components/Gallery";
-import { photos } from "@/lib/photos";
+import { fashionPhotos } from "@/lib/photos";
 
 export default function Home() {
-  const hasPhotos = photos.length > 0;
-  const hero = hasPhotos ? photos[0] : null;
+  const hasPhotos = fashionPhotos.length > 0;
+  const hero = hasPhotos ? fashionPhotos[0] : null;
 
   return (
     <main className="relative flex-1">
@@ -17,6 +17,9 @@ export default function Home() {
         <nav className="flex items-center gap-6 text-sm text-ink-soft">
           <a href="#gallery" className="transition hover:text-ink">
             Gallery
+          </a>
+          <a href="#architecture" className="transition hover:text-ink">
+            Architecture
           </a>
         </nav>
       </header>
@@ -33,21 +36,19 @@ export default function Home() {
             </span>
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft sm:text-lg">
-            {hasPhotos
-              ? "A curated portrait collection."
-              : "Gallery shell is live. Photos will land here next."}
+            Fashion frames across angles, light, and outfits — face and body
+            locked for consistency. Architecture sheets below for later
+            reproduction.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
               href="#gallery"
               className="inline-flex cursor-pointer items-center rounded-full bg-ink px-6 py-3 text-sm tracking-wide text-bg transition hover:bg-accent"
             >
-              {hasPhotos ? "Browse the set" : "View gallery"}
+              Browse the set
             </a>
             <p className="text-sm text-muted">
-              {hasPhotos
-                ? `${photos.length} photograph${photos.length === 1 ? "" : "s"}`
-                : "Awaiting images"}
+              {fashionPhotos.length} fashion frames
             </p>
           </div>
         </div>
@@ -76,18 +77,7 @@ export default function Home() {
               </figcaption>
             </figure>
           </div>
-        ) : (
-          <div className="fade-up fade-up-delay-2 lg:col-span-4">
-            <div className="flex aspect-[3/4] items-center justify-center rounded-sm border border-dashed border-line bg-card text-center">
-              <div className="px-6">
-                <p className="font-[family-name:var(--font-playfair)] text-xl text-ink">
-                  No frames yet
-                </p>
-                <p className="mt-2 text-sm text-muted">Images drop in next</p>
-              </div>
-            </div>
-          </div>
-        )}
+        ) : null}
       </section>
 
       <section
@@ -100,10 +90,36 @@ export default function Home() {
               Collection
             </p>
             <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl tracking-tight text-ink sm:text-4xl">
-              The gallery
+              Fashion gallery
             </h2>
+            <p className="mt-3 max-w-lg text-sm leading-relaxed text-ink-soft">
+              Varied poses, outfits, and lighting with locked face and body
+              identity.
+            </p>
           </div>
-          <Gallery />
+          <Gallery mode="fashion" />
+        </div>
+      </section>
+
+      <section id="architecture" className="border-t border-line py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <div className="mb-10 max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
+              Reproducible
+            </p>
+            <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl tracking-tight text-ink sm:text-4xl">
+              Face &amp; body architecture
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              Turnaround sheets for face angles, body, expressions, and lighting.
+              Written bible with prompt locks lives in{" "}
+              <code className="rounded bg-bg-deep px-1.5 py-0.5 text-xs text-ink">
+                docs/CHARACTER.md
+              </code>
+              .
+            </p>
+          </div>
+          <Gallery mode="architecture" />
         </div>
       </section>
 
@@ -112,7 +128,7 @@ export default function Home() {
           <p className="font-[family-name:var(--font-playfair)] text-ink">
             Priyanshi Agarwaal
           </p>
-          <p>Portrait gallery</p>
+          <p>Portrait gallery · identity-locked set</p>
         </div>
       </footer>
     </main>
