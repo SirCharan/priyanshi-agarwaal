@@ -172,37 +172,37 @@ export const FLUX_GOLD_PLATES: HeroPlate[] = [
     id: "flux-gold-stand-front",
     src: "/images/body-hero/flux-gold-stand-front.png",
     title: "Stand front · gold i2i",
-    note: "Flux · from Grok face gold · 2-pass",
+    note: "LoRA i2i · pass2 from nude draft",
   },
   {
     id: "flux-gold-stand-34",
     src: "/images/body-hero/flux-gold-stand-34.png",
     title: "Stand 3/4 · gold i2i",
-    note: "Flux · from Grok gold",
+    note: "LoRA i2i · fully nude",
   },
   {
     id: "flux-gold-sit",
     src: "/images/body-hero/flux-gold-sit.png",
     title: "Sit · gold i2i",
-    note: "Flux · from Grok gold",
+    note: "LoRA i2i · fully nude",
   },
   {
     id: "flux-gold-on-back",
     src: "/images/body-hero/flux-gold-on-back.png",
     title: "On back · gold i2i",
-    note: "Flux · from Grok gold",
+    note: "LoRA i2i · fully nude",
   },
   {
     id: "flux-gold-from-behind",
     src: "/images/body-hero/flux-gold-from-behind.png",
     title: "From behind · gold i2i",
-    note: "Flux · body gold seed",
+    note: "LoRA i2i · fully nude",
   },
   {
     id: "flux-gold-kneel",
     src: "/images/body-hero/flux-gold-kneel.png",
     title: "Kneel · gold i2i",
-    note: "Flux · from Grok gold",
+    note: "LoRA i2i · fully nude",
   },
   {
     id: "flux-gold-side",
@@ -438,21 +438,21 @@ export default function BodyRefGallery() {
           <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
-                Primary · Grok gold → Flux i2i
+                Primary · Grok gold → local nude i2i
               </p>
               <h3 className="mt-1 font-[family-name:var(--font-playfair)] text-xl text-ink">
-                Face from Grok pixels (two-pass img2img)
+                Fully nude from Grok face golds
               </h3>
               <p className="mt-1 text-xs text-ink-soft">
-                Starts from pinned Grok face/body golds — not text invent.
-                Pass1 body · Pass2 face re-lock. 1088×1472.
+                Pass1 high strength strips clothes · Pass2 refines the nude
+                draft (not the clothed gold). SDXL + LoRA.
               </p>
             </div>
             <span className="text-[11px] text-muted">{goldFlux.length} live</span>
           </div>
           {renderHeroGrid(
             goldFlux,
-            "Gold·Flux",
+            "Gold·nude",
             "bg-accent text-bg",
             "ring-accent/40 hover:ring-accent",
           )}

@@ -17,21 +17,23 @@
 | Face alt (open eyes) | `public/images/gen-07-beauty-beige.jpg` |
 | Full-body structure | `public/images/3cf63eb8-3338-46e3-9d8b-2d08d775ed4c.jpg` |
 
-## Two-pass
+## Two-pass (FIXED 2026-08-04)
 
-1. **Pass 1** strength ~**0.82** — body/pose/nude transform from pose seed  
-2. **Pass 2** strength ~**0.58** — re-lock from **face primary** gold with same nude+pose prompt  
+> [!danger] Bug that shipped clothed golds
+> Pass2 used to start **from the clothed face gold** at ~0.55 → output stayed a beige sweater portrait.
+> **Never** use the clothed gold as pass2 image seed.
+
+1. **Pass 1** strength ~**0.88** — gold seed → strip clothes / nude pose  
+2. **Pass 2** strength ~**0.42** — seed = **pass1 nude draft** only (refine face/quality, keep nude)
 
 ## Stacks (live)
 
 | Stack | Status |
 |-------|--------|
-| **SDXL + prynshi-v3 gold i2i** | **Works** — primary face-lock path |
-| **Flux Klein i2i** | **Broken** in draw-things-cli (`ccv_cnnp_concat` dim assert). Pure Flux t2i still works but invents face. |
+| **SDXL + prynshi-v3 gold i2i** | Primary (must be fully nude) |
+| **Flux Klein i2i** | Broken in CLI — do not use |
 
-Until Flux i2i is fixed: gold plates ship from LoRA two-pass into both `body-hero/flux-gold-*.png` (UI primary row) and `body-hero-lora/`.
-
-Seeds are pre-resized to **768×1024** before i2i.
+Seeds pre-resized to **768×1024**. UI labels say gold i2i (LoRA), not real Flux.
 
 ## Run
 
