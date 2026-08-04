@@ -17,31 +17,30 @@ Grok Imagine is better-trained on beauty, but **explicit nudes are often blocked
 2. Vision QC on local outputs
 3. Prompt rewrite after fail (max 3 tries)
 
-## Loop (full hybrid)
+## Loop (full hybrid) — **gold i2i mandatory**
 
 ```
 ┌─────────────────┐
-│ 1. SEED         │  Grok golds (clothed beauty) OR pose brief
-│    face / pose  │  Existing: public/images/*.jpg golds
+│ 1. SEED         │  Pinned Grok golds ONLY (2–3 images)
+│    face / body  │  See GOLD-I2I.md — never pure t2i for ship
 └────────┬────────┘
          ▼
 ┌─────────────────┐
-│ 2. GENERATE     │  Flux Klein t2i or i2i @ 1088×1472
-│    fully nude   │  Local only — uncensored stack
+│ 2. TWO-PASS i2i │  Pass1 ~0.82 body/pose · Pass2 ~0.58 face re-lock
+│    Flux + LoRA  │  Flux primary @1088×1472 · LoRA secondary compare
 └────────┬────────┘
          ▼
 ┌─────────────────┐
-│ 3. GROK QC      │  Vision: fully nude? face OK? deform?
-│    + rewrite    │  Fail → rewrite prompt → back to 2 (max 3)
-└────────┬────────┘
-         ▼
-┌─────────────────┐
-│ 4. SHIP         │  public/images/body-hero/ → Vercel
-│    “looks OK”   │  Fully nude + no deform (bar: any solid plate)
+│ 3. SHIP         │  As generated → body-hero / body-hero-lora → Vercel
+│    (fast bar)   │  Optional later: Grok vision QC + rewrite
 └─────────────────┘
 ```
 
-LoRA stays on `#body` as **train history**. Flux heroes go to `#body` hero row / `body-hero/`.
+**Why faces were bad:** t2i invents a generic South Asian face. Golds carry *her* pixels.
+
+Script: `scripts/gold-i2i-nude.sh`. LoRA v1–v3 history stays; **gold-i2i** is the hero face path.
+
+Details: **[GOLD-I2I.md](./GOLD-I2I.md)**
 
 ## QC rubric (Grok end-checker)
 

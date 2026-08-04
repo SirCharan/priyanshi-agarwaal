@@ -179,13 +179,12 @@ export default function Home() {
               Character lock · full nude body
             </p>
             <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl tracking-tight text-ink sm:text-4xl">
-              Full nude body · Flux + LoRA
+              Full nude body · gold i2i
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Top: Flux Klein heroes @1088×1472 (ship as generated). Below:
-              LoRA v1–v3 history from Draw Things +{" "}
-              <code className="text-xs">prynshi</code> — same poses across
-              trains. Not a 3D mesh.
+              Heroes start from <strong>Grok face pixels</strong> (img2img
+              two-pass), not text invent. Flux primary + LoRA compare. Below:
+              LoRA train history v1–v3. Not a 3D mesh.
             </p>
           </div>
           <BodyRefGallery />

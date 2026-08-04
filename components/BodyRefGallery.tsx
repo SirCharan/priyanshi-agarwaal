@@ -158,7 +158,7 @@ const VER_BLURB: Record<BodyVer, string> = {
   v3: "Clean set · beauty captions · hourglass body",
 };
 
-/** Flux Klein hero plates @1088×1472 — ship as generated (QC optional) */
+/** Hero plates — gold-i2i preferred; old t2i kept as archive */
 export type HeroPlate = {
   id: string;
   src: string;
@@ -166,54 +166,123 @@ export type HeroPlate = {
   note?: string;
 };
 
+/** Flux Klein two-pass img2img FROM Grok golds (face lock) */
+export const FLUX_GOLD_PLATES: HeroPlate[] = [
+  {
+    id: "flux-gold-stand-front",
+    src: "/images/body-hero/flux-gold-stand-front.png",
+    title: "Stand front · gold i2i",
+    note: "Flux · from Grok face gold · 2-pass",
+  },
+  {
+    id: "flux-gold-stand-34",
+    src: "/images/body-hero/flux-gold-stand-34.png",
+    title: "Stand 3/4 · gold i2i",
+    note: "Flux · from Grok gold",
+  },
+  {
+    id: "flux-gold-sit",
+    src: "/images/body-hero/flux-gold-sit.png",
+    title: "Sit · gold i2i",
+    note: "Flux · from Grok gold",
+  },
+  {
+    id: "flux-gold-on-back",
+    src: "/images/body-hero/flux-gold-on-back.png",
+    title: "On back · gold i2i",
+    note: "Flux · from Grok gold",
+  },
+  {
+    id: "flux-gold-from-behind",
+    src: "/images/body-hero/flux-gold-from-behind.png",
+    title: "From behind · gold i2i",
+    note: "Flux · body gold seed",
+  },
+  {
+    id: "flux-gold-kneel",
+    src: "/images/body-hero/flux-gold-kneel.png",
+    title: "Kneel · gold i2i",
+    note: "Flux · from Grok gold",
+  },
+];
+
+/** LoRA secondary — same golds, side-by-side face compare */
+export const LORA_GOLD_PLATES: HeroPlate[] = [
+  {
+    id: "lora-gold-stand-front",
+    src: "/images/body-hero-lora/lora-gold-stand-front.png",
+    title: "Stand front · LoRA gold",
+    note: "prynshi-v3 i2i · same gold",
+  },
+  {
+    id: "lora-gold-stand-34",
+    src: "/images/body-hero-lora/lora-gold-stand-34.png",
+    title: "Stand 3/4 · LoRA gold",
+    note: "prynshi-v3 i2i",
+  },
+  {
+    id: "lora-gold-sit",
+    src: "/images/body-hero-lora/lora-gold-sit.png",
+    title: "Sit · LoRA gold",
+    note: "prynshi-v3 i2i",
+  },
+  {
+    id: "lora-gold-on-back",
+    src: "/images/body-hero-lora/lora-gold-on-back.png",
+    title: "On back · LoRA gold",
+    note: "prynshi-v3 i2i",
+  },
+  {
+    id: "lora-gold-from-behind",
+    src: "/images/body-hero-lora/lora-gold-from-behind.png",
+    title: "From behind · LoRA gold",
+    note: "prynshi-v3 i2i",
+  },
+  {
+    id: "lora-gold-kneel",
+    src: "/images/body-hero-lora/lora-gold-kneel.png",
+    title: "Kneel · LoRA gold",
+    note: "prynshi-v3 i2i",
+  },
+];
+
+/** Old pure-t2i Flux (invented face) — archive only */
 export const FLUX_HERO_PLATES: HeroPlate[] = [
   {
     id: "flux-stand-front",
     src: "/images/body-hero/flux-stand-front-seduce.png",
-    title: "Stand front · Flux",
-    note: "Flux Klein · 1088×1472 · ship raw",
+    title: "Stand front · t2i archive",
+    note: "Pure t2i · no gold · face invent",
   },
   {
     id: "flux-stand-34",
     src: "/images/body-hero/flux-stand-34-seduce.png",
-    title: "Stand 3/4 · Flux",
-    note: "Flux Klein · 1088×1472 · ship raw",
+    title: "Stand 3/4 · t2i archive",
+    note: "Pure t2i archive",
   },
   {
     id: "flux-sit-spread",
     src: "/images/body-hero/flux-sit-spread.png",
-    title: "Sit · Flux",
-    note: "Flux Klein · when ready",
+    title: "Sit · t2i archive",
+    note: "Pure t2i archive",
   },
   {
     id: "flux-on-back",
     src: "/images/body-hero/flux-on-back.png",
-    title: "On back · Flux",
-    note: "Flux Klein · when ready",
+    title: "On back · t2i archive",
+    note: "Pure t2i archive",
   },
   {
     id: "flux-from-behind",
     src: "/images/body-hero/flux-from-behind.png",
-    title: "From behind · Flux",
-    note: "Flux Klein · when ready",
+    title: "From behind · t2i archive",
+    note: "Pure t2i archive",
   },
   {
     id: "flux-kneel",
     src: "/images/body-hero/flux-kneel.png",
-    title: "Kneel · Flux",
-    note: "Flux Klein · when ready",
-  },
-  {
-    id: "flux-i2i-front",
-    src: "/images/body-hero/flux-i2i-front.png",
-    title: "i2i front · Flux",
-    note: "img2img from gold",
-  },
-  {
-    id: "flux-i2i-beauty-nude",
-    src: "/images/body-hero/flux-i2i-beauty-nude.png",
-    title: "i2i beauty nude · Flux",
-    note: "img2img face gold",
+    title: "Kneel · t2i archive",
+    note: "Pure t2i archive",
   },
 ];
 
@@ -234,7 +303,15 @@ export default function BodyRefGallery() {
     });
   }, [filter, missing]);
 
-  const heroes = useMemo(
+  const goldFlux = useMemo(
+    () => FLUX_GOLD_PLATES.filter((h) => !heroMissing[h.id]),
+    [heroMissing],
+  );
+  const goldLora = useMemo(
+    () => LORA_GOLD_PLATES.filter((h) => !heroMissing[h.id]),
+    [heroMissing],
+  );
+  const heroesArchive = useMemo(
     () => FLUX_HERO_PLATES.filter((h) => !heroMissing[h.id]),
     [heroMissing],
   );
@@ -242,61 +319,109 @@ export default function BodyRefGallery() {
   const countVer = (v: BodyVer) =>
     BODY_NUDE_PLATES.filter((s) => s.version === v && !missing[s.id]).length;
 
+  const renderHeroGrid = (
+    list: HeroPlate[],
+    chip: string,
+    chipClass: string,
+    ringClass: string,
+  ) => (
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+      {list.map((h) => (
+        <button
+          key={h.id}
+          type="button"
+          onClick={() => setHeroActive(h)}
+          className={`group overflow-hidden rounded-sm bg-card text-left ring-1 ${ringClass} transition hover:opacity-95`}
+        >
+          <div className="relative">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={h.src}
+              alt={h.title}
+              className="aspect-[3/4] w-full object-cover object-top"
+              loading="lazy"
+              onError={() => setHeroMissing((m) => ({ ...m, [h.id]: true }))}
+            />
+            <span
+              className={`absolute left-2 top-2 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${chipClass}`}
+            >
+              {chip}
+            </span>
+          </div>
+          <div className="border-t border-line px-2.5 py-2">
+            <p className="font-[family-name:var(--font-playfair)] text-sm text-ink">
+              {h.title}
+            </p>
+            {h.note ? <p className="text-[10px] text-muted">{h.note}</p> : null}
+          </div>
+        </button>
+      ))}
+    </div>
+  );
+
   return (
     <div>
-      {heroes.length > 0 ? (
+      {goldFlux.length > 0 ? (
         <div className="mb-12">
           <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
-                Flux hero · 1088×1472
+                Primary · Grok gold → Flux i2i
               </p>
               <h3 className="mt-1 font-[family-name:var(--font-playfair)] text-xl text-ink">
-                Flux Klein nudes (ship as generated)
+                Face from Grok pixels (two-pass img2img)
               </h3>
               <p className="mt-1 text-xs text-ink-soft">
-                Higher-res local Flux — not LoRA. Plates appear as they land;
-                QC not required for upload.
+                Starts from pinned Grok face/body golds — not text invent.
+                Pass1 body · Pass2 face re-lock. 1088×1472.
               </p>
             </div>
-            <span className="text-[11px] text-muted">
-              {heroes.length} live
-            </span>
+            <span className="text-[11px] text-muted">{goldFlux.length} live</span>
           </div>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            {heroes.map((h) => (
-              <button
-                key={h.id}
-                type="button"
-                onClick={() => setHeroActive(h)}
-                className="group overflow-hidden rounded-sm bg-card text-left ring-1 ring-accent/40 transition hover:ring-accent"
-              >
-                <div className="relative">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={h.src}
-                    alt={h.title}
-                    className="aspect-[3/4] w-full object-cover object-top"
-                    loading="lazy"
-                    onError={() =>
-                      setHeroMissing((m) => ({ ...m, [h.id]: true }))
-                    }
-                  />
-                  <span className="absolute left-2 top-2 rounded-full bg-accent px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-bg">
-                    Flux
-                  </span>
-                </div>
-                <div className="border-t border-line px-2.5 py-2">
-                  <p className="font-[family-name:var(--font-playfair)] text-sm text-ink">
-                    {h.title}
-                  </p>
-                  {h.note ? (
-                    <p className="text-[10px] text-muted">{h.note}</p>
-                  ) : null}
-                </div>
-              </button>
-            ))}
+          {renderHeroGrid(
+            goldFlux,
+            "Gold·Flux",
+            "bg-accent text-bg",
+            "ring-accent/40 hover:ring-accent",
+          )}
+        </div>
+      ) : null}
+
+      {goldLora.length > 0 ? (
+        <div className="mb-12">
+          <div className="mb-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">
+              Compare · same gold → LoRA i2i
+            </p>
+            <h3 className="mt-1 font-[family-name:var(--font-playfair)] text-lg text-ink">
+              LoRA secondary (same seeds)
+            </h3>
           </div>
+          {renderHeroGrid(
+            goldLora,
+            "Gold·LoRA",
+            "bg-ink text-bg",
+            "ring-line hover:ring-ink/30",
+          )}
+        </div>
+      ) : null}
+
+      {heroesArchive.length > 0 ? (
+        <div className="mb-12">
+          <div className="mb-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">
+              Archive · pure t2i (invented face)
+            </p>
+            <h3 className="mt-1 font-[family-name:var(--font-playfair)] text-lg text-ink">
+              Old Flux t2i (why faces looked bad)
+            </h3>
+          </div>
+          {renderHeroGrid(
+            heroesArchive,
+            "t2i",
+            "bg-muted text-ink-soft",
+            "ring-line",
+          )}
         </div>
       ) : null}
 
