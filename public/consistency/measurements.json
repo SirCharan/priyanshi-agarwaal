@@ -1,0 +1,40 @@
+{
+  "name": "prynshi",
+  "displayName": "Priyanshi Agarwaal",
+  "version": 2,
+  "units": "cm",
+  "height_cm": 165,
+  "weight_kg": 52,
+  "bust_cm": 86,
+  "underbust_cm": 72,
+  "waist_cm": 64,
+  "hips_cm": 90,
+  "shoulder_width_cm": 38,
+  "arm_length_cm": 58,
+  "inseam_cm": 78,
+  "outseam_cm": 98,
+  "thigh_cm": 48,
+  "calf_cm": 33,
+  "ankle_cm": 20,
+  "neck_cm": 31,
+  "torso_cm": 42,
+  "shoe_eu": 38,
+  "hair": {
+    "color": "near-black",
+    "length": "mid-back",
+    "style": "loose S-waves",
+    "bangs": "soft curtain, center-left part, skim brows",
+    "crown_volume": true
+  },
+  "face": {
+    "shape": "oval",
+    "eyes": "large almond dark brown",
+    "nose": "straight soft tip",
+    "lips": "full cupid bow",
+    "skin": "warm medium-tan golden undertone"
+  },
+  "build": "slim-athletic",
+  "prompt_snippet": "165cm tall, 52kg, slim-athletic, 86-64-90 bust-waist-hip, long legs, narrow soft shoulders",
+  "hair_lock": "same hair: near-black long S-waves, soft curtain bangs center-left part, mid-back length, crown volume, never stick-straight",
+  "identity_lock": "Exact same young South Asian woman named prynshi: long wavy near-black hair with soft curtain bangs that skim the eyebrows (center-left part, S-wave mid-length past shoulders), warm medium-tan skin with even golden undertone, large dark almond eyes, full naturally arched brows, straight nose with soft rounded tip, full lips with defined cupid's bow, oval face soft jaw short chin. Slim-athletic build 165 cm: bust 86 cm, underbust 72 cm, waist 64 cm, hips 90 cm, long legs, narrow-medium sloped shoulders. Keep face, hair color and wave pattern, skin tone, and these body proportions identical and unchanged in every pose."
+}

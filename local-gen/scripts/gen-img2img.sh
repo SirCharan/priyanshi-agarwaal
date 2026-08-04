@@ -16,14 +16,21 @@ mkdir -p "$OUT_DIR"
 STAMP=$(date +%Y%m%d-%H%M%S)
 OUT="$OUT_DIR/i2i-$STAMP.png"
 
-LOCK='Exact same young South Asian woman as the reference photo: long wavy dark hair with soft curtain bangs, warm medium skin, identical face and slim-athletic body. '
+LOCK='Exact same young South Asian woman as the reference photo: long wavy near-black hair soft curtain bangs center-left S-waves mid-back, warm medium-tan skin, identical face, slim-athletic 165cm 86-64-90 bust-waist-hip. '
 # Prefer prynshi token when LoRA is on
 if [[ "${LORA:-0}" == "1" || "${LORA:-}" == "true" ]]; then
   LOCK="photo of prynshi woman, ${LOCK}"
 fi
 
 MODEL="${MODEL:-sd_xl_base_1.0_q6p_q8p.ckpt}"
-LORA_FILE="${LORA_FILE:-prynshi-sdxl_400_lora_f32.ckpt}"
+if [[ -z "${LORA_FILE:-}" ]]; then
+  MODELS="$HOME/Library/Containers/com.liuliu.draw-things/Data/Documents/Models"
+  if [[ -f "$MODELS/prynshi-sdxl-v2_700_lora_f32.ckpt" ]]; then
+    LORA_FILE=prynshi-sdxl-v2_700_lora_f32.ckpt
+  else
+    LORA_FILE=prynshi-sdxl_400_lora_f32.ckpt
+  fi
+fi
 LORA_WEIGHT="${LORA_WEIGHT:-1.0}"
 
 ARGS=(generate --model "$MODEL" --image "$REF" --strength "$STRENGTH" \

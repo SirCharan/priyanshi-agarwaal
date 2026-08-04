@@ -1,137 +1,188 @@
 # Priyanshi Agarwaal — Character Architecture
 
-Canonical identity bible for reproducible image generation.  
-Use this + the architecture sheets in `public/images/architecture/` before every new shoot.
+Canonical identity bible for reproducible image generation and LoRA training.  
+Use this + golds in `public/images/` + sheets in `public/images/architecture/` + single-view plates in `local-gen/consistency/`.
+
+**Version:** v2 — measurements + multi-view face/body/hair lock (2026-08-04)
 
 ---
 
 ## Identity lock (paste first in every prompt)
 
 ```
-Exact same young South Asian woman as the reference images: long wavy near-black hair with soft curtain bangs that skim the eyebrows, warm medium-tan skin with even undertone, large dark almond eyes, full naturally arched brows, straight nose with a soft rounded tip, full lips with defined cupid's bow, oval face with soft jaw and short chin, slim-athletic build with narrow shoulders and balanced hips. Keep her face, facial features, hair color, skin tone, and body proportions completely identical and unchanged.
+Exact same young South Asian woman named prynshi: long wavy near-black hair with soft curtain bangs that skim the eyebrows (center-left part, S-wave mid-length past shoulders), warm medium-tan skin with even golden undertone, large dark almond eyes, full naturally arched brows, straight nose with soft rounded tip, full lips with defined cupid's bow, oval face soft jaw short chin. Slim-athletic build 165 cm: bust 86 cm, underbust 72 cm, waist 64 cm, hips 90 cm, long legs, narrow-medium sloped shoulders. Keep face, hair color and wave pattern, skin tone, and these body proportions identical and unchanged in every pose.
+```
+
+**LoRA token:** always include `prynshi` when the adapter is loaded.
+
+---
+
+## Canonical body measurements (lock these)
+
+Fashion-editorial slim-athletic. Numbers are the **source of truth** for prompts, LoRA captions, and the local 3D proportion mannequin (`local-gen/consistency/mannequin.html`).
+
+| Metric | Value | Notes |
+|--------|-------|--------|
+| **Height** | **165 cm** (5′5″) | Fashion camera often reads slightly taller |
+| **Weight** | **52 kg** | Lean; not skinny-fragile, not muscular bulk |
+| **BMI band** | ~19.1 | Slim-athletic |
+| **Bust (full)** | **86 cm** | Soft natural chest; not exaggerated |
+| **Underbust** | **72 cm** | |
+| **Band / cup guide** | ~32B–C | For clothing prompts only |
+| **Waist** | **64 cm** | Defined, natural (no extreme hourglass) |
+| **Hips** | **90 cm** | Gentle curve; hip:waist ≈ 1.41 |
+| **Shoulder width** | **38 cm** | Biacromial, soft slope |
+| **Arm length (shoulder→wrist)** | **58 cm** | Slim arms, no bulk |
+| **Inseam** | **78 cm** | Long-legged vs torso |
+| **Outseam** | **98 cm** | |
+| **Thigh (mid)** | **48 cm** | Athletic, not thick |
+| **Calf** | **33 cm** | Slim |
+| **Ankle** | **20 cm** | |
+| **Neck** | **31 cm** | Long, elegant |
+| **Torso (CS7–hip)** | ~42 cm | Medium torso, longer legs |
+| **Shoe** | EU 38 / US 7.5 | Slim foot |
+| **Hand** | Slim fingers, modest nails | No claw poses |
+
+### Measurement prompt snippet
+
+```
+165cm tall, 52kg, slim-athletic, 86-64-90 bust-waist-hip, long legs, narrow soft shoulders
+```
+
+**Do not** thicken arms, widen jaw, lighten skin, straighten hair stick-straight, age her, or inflate bust/hips past the table.
+
+---
+
+## Face landmarks (must hold at every angle)
+
+| Region | Spec |
+|--------|------|
+| **Face shape** | Oval; medium forehead; soft jaw; short rounded chin |
+| **Hairline** | Natural rounded; no hard widow’s peak |
+| **Bangs** | Soft curtain bangs, center-left part, skim brows; airy not blunt |
+| **Hair** | Near-black / very dark brown; mid-back length; loose S-waves; crown volume; flyaways OK in wind; **same part + wave pattern from front, 3/4, profile, back** |
+| **Brows** | Full natural arch, dark; slight lift outer third |
+| **Eyes** | Large almond; dark brown; long lashes; mild lid fold; warm catchlights |
+| **Nose** | Straight bridge, soft tip, small refined nostrils |
+| **Lips** | Full; soft pink-nude; defined cupid’s bow |
+| **Cheeks** | Soft high cheekbones; apple when smiling |
+| **Ears** | Small; often half-hidden by waves |
+| **Makeup** | Natural fashion glow; no heavy contour unless shot asks |
+
+### Face multi-view checklist (generate as **separate** images, not one grid)
+
+| ID | View | Camera |
+|----|------|--------|
+| F0 | Front | Eye-level, face square to camera |
+| F45L / F45R | 3/4 left / right | Body optional crop |
+| F90L / F90R | True profile L/R | Ear + nose silhouette |
+| F-up | Slight low angle | Chin line soft, not under-jaw monster |
+| F-down | Slight high angle | Bangs readable |
+| F-back | Occipital / hair back | Wave pattern + part from behind |
+
+### Expression defaults
+
+- **Neutral soft** · **Soft smile** · **Laugh** (teeth OK) · **Serene eyes closed**
+
+---
+
+## Body + pose consistency (same skeleton every shot)
+
+Same 86-64-90, same limb lengths, whether standing, sitting, or training.
+
+| Pose family | Spec |
+|-------------|------|
+| **Stand front** | Weight often one hip; long neck; arms relaxed |
+| **Stand back** | Same hip width; hair mid-back; spine straight |
+| **Stand 3/4** | Shoulder–hip ratio holds |
+| **Sit chair** | Hips 90 cm readable; torso not shortened; knees together or soft cross |
+| **Sit floor / ground** | Same waist–hip; no mass gain in thighs |
+| **Walk / stride** | Long inseam; natural arm swing |
+| **Squat / gym** | Athletic but not bodybuilder; modest athletic wear |
+| **Yoga / stretch** | Limb length stable; no rubber arms |
+| **Over-shoulder** | Head turn only; body proportions unchanged |
+| **Beauty crop** | Head-shoulders only; neck length consistent |
+
+### Hair lock (all poses)
+
+```
+same hair: near-black long S-waves, soft curtain bangs center-left part, mid-back length, crown volume, never stick-straight, never blonde or light brown, never short bob
 ```
 
 ---
 
-## Face landmarks
-
-| Region | Spec |
-|--------|------|
-| **Face shape** | Oval; forehead medium height; jaw soft, not square; chin short and rounded |
-| **Hairline** | Natural rounded; no hard widow’s peak |
-| **Bangs** | Soft curtain bangs, slightly parted center-left, length to brows; airy, not blunt |
-| **Hair** | Near-black / very dark brown; long wavy (shoulder to mid-back); loose S-waves; volume at crown; flyaways OK in wind |
-| **Brows** | Full, naturally arched, dark; not over-plucked; slight lift at outer third |
-| **Eyes** | Large almond; dark brown iris; long lashes; mild upper lid fold; warm catchlights |
-| **Nose** | Straight bridge, soft tip, small refined nostrils; no sharp ridge |
-| **Lips** | Full upper + lower; soft pink-nude; defined cupid’s bow; natural line |
-| **Cheeks** | Soft high cheekbones; gentle apple when smiling |
-| **Ears** | Small; often half-hidden by waves |
-| **Makeup baseline** | Natural fashion: soft glow skin, light blush, subtle liner, natural lip — never heavy contour or dramatic glam unless shot asks |
-
-### Expression defaults
-
-- **Neutral soft:** closed mouth, relaxed eyes, slight lifelike asymmetry  
-- **Soft smile:** closed lips, cheek lift, eyes warm  
-- **Laugh:** open teeth smile, eyes squint, head tilt OK (see `142c2511` gold)  
-- **Serene:** eyes closed, chin slightly up (see `6b204030` gold)
-
----
-
-## Body proportions
-
-| Region | Spec |
-|--------|------|
-| **Build** | Slim-athletic; fashion height look; long limbs relative to torso |
-| **Shoulders** | Narrow-medium, soft slope |
-| **Torso** | Medium length; defined waist |
-| **Hips** | Balanced to shoulders; gentle curve (not extreme) |
-| **Legs** | Long; calf/ankle slim |
-| **Posture** | Upright fashion stance; weight often on one hip; neck long and relaxed |
-| **Hands** | Slim fingers; natural pose (no clawing) |
-| **Feet** | Slim; often strappy heels or barefoot in garden shots |
-
-**Do not** thicken arms, widen jaw, lighten skin, straighten hair to stick-straight, or age her up/down.
-
----
-
-## Gold reference map (local files)
+## Gold reference map
 
 | Role | File | Use for |
 |------|------|---------|
-| Full body front | `public/images/3cf63eb8-3338-46e3-9d8b-2d08d775ed4c.jpg` | Body proportions, front face, standing |
-| 3/4 playful | `public/images/142c2511-9d2c-4469-a540-524ff39d818c.jpg` | Laugh, 3/4 body, casual energy |
-| Side profile | `public/images/de4e3f32-a973-4dad-b1d7-1a6efe06141e.jpg` | True profile, nose/chin silhouette |
-| Seated over-shoulder | `public/images/fdcb4672-faef-4448-bbf3-d366dfd03679.jpg` | Over-shoulder, seated hips |
-| Beauty close-up | `public/images/6b204030-f231-4855-b1aa-f25a077957a0.jpg` | Face lock, skin, bangs, eyes closed |
+| Full body front | `public/images/3cf63eb8-….jpg` | Body, front face, stand |
+| 3/4 laugh | `public/images/142c2511-….jpg` | Smile, casual |
+| Side profile | `public/images/de4e3f32-….jpg` | Nose/chin silhouette |
+| Seated | `public/images/fdcb4672-….jpg` | Sit hips |
+| Beauty close | `public/images/6b204030-….jpg` | Face lock, bangs |
+| Face multi-angle sheet | `public/images/architecture/arch-face-orthographic.jpg` | QA only (not LoRA grid) |
+| Body turnaround sheet | `public/images/architecture/arch-body-turnaround.jpg` | QA only |
+| Single-view plates | `local-gen/consistency/plates/` | LoRA dataset preferred |
 
-### Architecture sheets (generated)
-
-| Sheet | File |
-|-------|------|
-| Face multi-angle | `public/images/architecture/arch-face-orthographic.jpg` |
-| Body turnaround | `public/images/architecture/arch-body-turnaround.jpg` |
-| Expressions | `public/images/architecture/arch-expression-sheet.jpg` |
-| Lighting study | `public/images/architecture/arch-lighting-study.jpg` |
+> **Training rule:** Prefer **one person, one pose per image**. Multi-panel architecture sheets are for human QA / 3D mannequin check — not primary LoRA crops (grids confuse the model).
 
 ---
 
 ## Master prompt blocks
 
-### Style lock (fashion site)
+### Style lock
 
 ```
-High-fashion editorial photograph for a fashion website. Sharp focus on the face, natural color grade, clean composition, professional photography, tasteful clothing, no text overlays, no logos.
+High-fashion editorial photograph. Sharp focus on the face, natural color grade, clean composition, professional photography, tasteful modest-friendly clothing, no text, no logos, single subject.
 ```
 
-### Angle helpers
+### Local Draw Things (with LoRA)
 
-- **Full front:** “full-body front view, camera at chest height, subject facing camera”
-- **3/4:** “three-quarter view, body slightly turned, face toward camera”
-- **True profile:** “true side profile, ear and nose silhouette clear, looking to frame edge”
-- **Over-shoulder:** “back three-quarter, head turned looking over shoulder toward camera”
-- **Beauty close:** “tight portrait head-and-shoulders, shallow depth of field”
+```bash
+LORA=1 ./scripts/gen.sh "photo of prynshi woman, 165cm 86-64-90 slim-athletic, [pose], [outfit], [light], same hair S-waves curtain bangs"
+```
 
-### Lighting helpers
+### Generation procedure
 
-- Golden hour · Overcast soft · Hard midday · Blue hour rim · Beauty soft fill · Night string lights · Clean studio softbox
+1. Identity lock + measurements snippet + hair lock.  
+2. One angle + one pose + one outfit + light + style.  
+3. For face: use beauty gold as img2img ref strength 0.35–0.5.  
+4. For outfit change: **pure LoRA t2i** (img2img ≤0.7 on strong golds locks the old outfit).  
+5. QA against this bible + mannequin ratios.  
+6. Register keepers in `lib/photos.ts`.
 
 ---
 
-## Generation procedure (for future sessions)
+## Local 3D body + face (live on site)
 
-1. Load **face close-up** + **full body** as `image_edit` references (never text-only `image_gen` for her face).  
-2. Paste **Identity lock** first.  
-3. Add one angle + one pose + one outfit + one lighting + **Style lock**.  
-4. QA: face shape, bangs, skin tone, body proportions. Regen once if drifted.  
-5. Register file in `lib/photos.ts`.
+**Production (single page):** https://priyanshi-agarwaal.vercel.app/#body
 
-### Tool rule
+Everything lives on **one page** (`/`) — gallery, workout, architecture, 3D studio, archive. No separate routes.
 
-- **Recurring likeness:** always `image_edit` with existing gold refs.  
-- **Never** invent her from a text prompt alone.
+- **Base body:** full anatomy for clothing QA — lathed 86-64-90 curves, breasts + nipples, glutes, mons/camel-toe ridge.
+- **Outfit layers:** full anatomy · bikini · fitted · loose (same skeleton).
+- **Face expressions:** eyes open / half / closed · mouth closed / soft-open / open · smile none / soft / full.
+- **Hair:** mid-back S-wave + curtain bangs locked on every expression.
+
+Local offline mannequin:
+
+```bash
+open local-gen/consistency/mannequin.html
+```
+
+If a generated image reads wider hips, shorter legs, or a different face under a new expression, discard or retrain.
 
 ---
 
 ## Do / Don’t
 
-**Do**
+**Do:** bangs + S-wave · warm medium skin · 86-64-90 · long legs · single subject  
 
-- Keep bangs + wave pattern  
-- Keep warm medium skin  
-- Keep slim-athletic proportions  
-- Vary outfit / light / pose freely once identity is locked  
-
-**Don’t**
-
-- Change ethnicity, age, or beauty “upgrade” that rewrites her face  
-- Extreme body morphs  
-- Heavy glam makeup by default  
-- Text, watermarks, or extra people unless requested  
+**Don’t:** ethnicity/age rewrite · extreme morphs · heavy glam by default · multi-person · watermarks · train on multi-face grids
 
 ---
 
-## Version
+## Changelog
 
-- **v1** — derived from 7 Grok Imagine gold frames + architecture sheets (session expansion).  
-- Update this file when a new gold angle permanently beats an old one.
+- **v1** — golds + arch sheets, qualitative proportions  
+- **v2** — numeric measurements, hair lock, pose matrix, mannequin, single-view plate pipeline  

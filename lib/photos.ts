@@ -6,9 +6,39 @@ export type Photo = {
   tag: "fashion" | "architecture" | "workout";
 };
 
-/** Fashion frames — original Imagine set + consistency expansion */
+/** Fashion frames — original Imagine set + consistency expansion + local LoRA */
 export const photos: Photo[] = [
-  // New expansion (hero-first: emerald)
+  // Local Draw Things / prynshi LoRA (hero-first: navy studio)
+  {
+    id: "lg-01",
+    src: "/images/lg-01-navy-jumpsuit.png",
+    title: "Navy Jumpsuit Studio",
+    place: "Local LoRA · full body",
+    tag: "fashion",
+  },
+  {
+    id: "lg-03",
+    src: "/images/lg-03-cream-blazer.png",
+    title: "Cream Blazer Local",
+    place: "Local LoRA · street walk",
+    tag: "fashion",
+  },
+  {
+    id: "lg-04",
+    src: "/images/lg-04-soft-portrait.png",
+    title: "Soft Studio Portrait",
+    place: "Local LoRA · beauty",
+    tag: "fashion",
+  },
+  {
+    id: "lg-05",
+    src: "/images/lg-05-fashion-i2i.png",
+    title: "Tropical Fashion Lock",
+    place: "Local img2img · gold ref",
+    tag: "fashion",
+  },
+
+  // New expansion (Imagine set)
   {
     id: "gen-01",
     src: "/images/gen-01-emerald-wrap.jpg",
@@ -180,6 +210,20 @@ export const architecture: Photo[] = [
 
 /** Identity-locked workout / fitness set (modest athletic wear) */
 export const workout: Photo[] = [
+  {
+    id: "lg-02",
+    src: "/images/lg-02-gym-set.png",
+    title: "Black Gym Set",
+    place: "Local LoRA · studio gym",
+    tag: "workout",
+  },
+  {
+    id: "lg-06",
+    src: "/images/lg-06-workout-i2i.png",
+    title: "Workout Img2Img",
+    place: "Local · gold-ref lock",
+    tag: "workout",
+  },
   {
     id: "wo-01",
     src: "/images/workout/wo-01-run-profile.jpg",

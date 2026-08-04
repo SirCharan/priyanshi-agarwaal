@@ -14,7 +14,15 @@ mkdir -p "$OUT_DIR"
 STAMP=$(date +%Y%m%d-%H%M%S)
 OUT="$OUT_DIR/gen-$STAMP.png"
 MODEL="${MODEL:-sd_xl_base_1.0_q6p_q8p.ckpt}"
-LORA_FILE="${LORA_FILE:-prynshi-sdxl_400_lora_f32.ckpt}"
+# Prefer v2 (20-image / 700-step) when present
+if [[ -z "${LORA_FILE:-}" ]]; then
+  MODELS="$HOME/Library/Containers/com.liuliu.draw-things/Data/Documents/Models"
+  if [[ -f "$MODELS/prynshi-sdxl-v2_700_lora_f32.ckpt" ]]; then
+    LORA_FILE=prynshi-sdxl-v2_700_lora_f32.ckpt
+  else
+    LORA_FILE=prynshi-sdxl_400_lora_f32.ckpt
+  fi
+fi
 LORA_WEIGHT="${LORA_WEIGHT:-1.0}"
 
 ARGS=(generate --model "$MODEL" --prompt "$PROMPT" --width 768 --height 1024 --output "$OUT")

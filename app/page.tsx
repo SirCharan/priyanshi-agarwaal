@@ -1,3 +1,5 @@
+import ArchiveGrid from "@/components/ArchiveGrid";
+import BodyStudio from "@/components/BodyStudio";
 import Gallery from "@/components/Gallery";
 import { fashionPhotos } from "@/lib/photos";
 
@@ -9,12 +11,12 @@ export default function Home() {
     <main className="relative flex-1">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-5 py-6 sm:px-8">
         <a
-          href="/"
+          href="#top"
           className="font-[family-name:var(--font-playfair)] text-xl tracking-tight text-ink"
         >
           Priyanshi Agarwaal
         </a>
-        <nav className="flex items-center gap-6 text-sm text-ink-soft">
+        <nav className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm text-ink-soft sm:gap-x-5">
           <a href="#gallery" className="transition hover:text-ink">
             Gallery
           </a>
@@ -24,16 +26,22 @@ export default function Home() {
           <a href="#architecture" className="transition hover:text-ink">
             Architecture
           </a>
-          <a href="/archive" className="transition hover:text-ink">
+          <a href="#body" className="transition hover:text-ink">
+            3D body
+          </a>
+          <a href="#archive" className="transition hover:text-ink">
             Archive
           </a>
         </nav>
       </header>
 
-      <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-4 sm:px-8 lg:grid-cols-12 lg:gap-12 lg:pb-24 lg:pt-8">
+      <section
+        id="top"
+        className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-4 sm:px-8 lg:grid-cols-12 lg:gap-12 lg:pb-24 lg:pt-8"
+      >
         <div className={`fade-up ${hero ? "lg:col-span-5" : "lg:col-span-8"}`}>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-accent">
-            Portrait gallery
+            Portrait gallery · single page
           </p>
           <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(2.5rem,5.5vw,4.25rem)] leading-[0.95] tracking-tight text-ink">
             Priyanshi
@@ -42,9 +50,9 @@ export default function Home() {
             </span>
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft sm:text-lg">
-            Fashion frames across angles, light, and outfits — face and body
-            locked for consistency. Architecture sheets below for later
-            reproduction.
+            Fashion, workout, architecture sheets, full-anatomy 3D mannequin
+            (face expressions + clothing layers), and image archive — all on
+            one page. Face and body locked at 165&nbsp;cm · 86-64-90.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
@@ -52,6 +60,12 @@ export default function Home() {
               className="inline-flex cursor-pointer items-center rounded-full bg-ink px-6 py-3 text-sm tracking-wide text-bg transition hover:bg-accent"
             >
               Browse the set
+            </a>
+            <a
+              href="#body"
+              className="inline-flex cursor-pointer items-center rounded-full border border-line px-6 py-3 text-sm tracking-wide text-ink transition hover:border-ink/30"
+            >
+              3D body model
             </a>
             <p className="text-sm text-muted">
               {fashionPhotos.length} fashion frames
@@ -120,8 +134,8 @@ export default function Home() {
               Workout
             </h2>
             <p className="mt-3 max-w-lg text-sm leading-relaxed text-ink-soft">
-              Identity-locked training frames — gym, run, yoga, boxing, cycle —
-              same face and body, modest athletic wear.
+              Identity-locked training frames — same face and body, modest
+              athletic wear.
             </p>
           </div>
           <Gallery mode="workout" />
@@ -139,7 +153,7 @@ export default function Home() {
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
               Turnaround sheets for face angles, body, expressions, and lighting.
-              Written bible with prompt locks lives in{" "}
+              Written bible in{" "}
               <code className="rounded bg-bg-deep px-1.5 py-0.5 text-xs text-ink">
                 docs/CHARACTER.md
               </code>
@@ -150,12 +164,48 @@ export default function Home() {
         </div>
       </section>
 
+      <section
+        id="body"
+        className="border-t border-line/80 bg-bg-deep/40 py-16 sm:py-20"
+      >
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <div className="mb-10 max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
+              Character lock · 3D
+            </p>
+            <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl tracking-tight text-ink sm:text-4xl">
+              Body model &amp; face
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              Full anatomy base (curves, breasts, nipples, glutes, camel toe) so
+              bikini and body-fit clothes wrap the same frame. Face presets:
+              eyes, mouth, smile — hair and skull stay locked.
+            </p>
+          </div>
+          <BodyStudio />
+        </div>
+      </section>
+
+      <section id="archive" className="border-t border-line py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <div className="mb-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
+              Permanent storage
+            </p>
+            <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl tracking-tight text-ink sm:text-4xl">
+              Image archive
+            </h2>
+          </div>
+          <ArchiveGrid />
+        </div>
+      </section>
+
       <footer className="mt-auto border-t border-line py-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <p className="font-[family-name:var(--font-playfair)] text-ink">
             Priyanshi Agarwaal
           </p>
-          <p>Portrait gallery · identity-locked set</p>
+          <p>Single-page gallery · identity-locked set · 3D body</p>
         </div>
       </footer>
     </main>

@@ -34,50 +34,54 @@ Outputs go to `./outputs/`. Close-up refs lock framing as portrait — use a **f
 
 ## LoRA (token `prynshi`)
 
-Dataset: `./dataset/` — 8 image+caption pairs, token **`prynshi`** in every caption.
+Dataset: `./dataset/` — **20** image+caption pairs (golds + fashion/workout, not self-gens), token **`prynshi`** in every caption.
 
-Train on **SDXL** (16 GB–safe):
+### Train
 
 ```bash
-draw-things-cli train lora \
-  --model sd_xl_base_1.0_q6p_q8p.ckpt \
-  --dataset ./dataset \
-  --steps 400 \
-  --memory-saver balanced \
-  --output prynshi-sdxl \
-  --name prynshi \
-  --save-every 100
+# SDXL v2 (default, 16 GB–safe) — 700 steps
+./scripts/train-lora.sh
+# or STEPS=800 ./scripts/train-lora.sh
+
+# Flux Klein experiment
+BASE=flux STEPS=600 ./scripts/train-lora.sh
 ```
 
 LoRA files (outside git, Draw Things Models dir):
 
-- `prynshi-sdxl_400_lora_f32.ckpt` — final (use this)
-- checkpoints at 100 / 200 / 300 steps also saved
+| File | Notes |
+|------|--------|
+| `prynshi-sdxl-v2_700_lora_f32.ckpt` | preferred SDXL (after retrain) |
+| `prynshi-sdxl_400_lora_f32.ckpt` | first train (8 images) |
+| `prynshi-flux_*_lora_f32.ckpt` | Flux experiment |
 
-Generate with token **`prynshi`** + LoRA attached:
+### Generate
 
 ```bash
-# Text-to-image with LoRA
+# Text-to-image with LoRA (best for outfit changes)
 LORA=1 ./scripts/gen.sh "photo of prynshi woman, fashion portrait, studio soft light"
 
-# Img2img + LoRA (best identity)
+# Point at v2 weights if not default
+LORA=1 LORA_FILE=prynshi-sdxl-v2_700_lora_f32.ckpt ./scripts/gen.sh "photo of prynshi woman, …"
+
+# Img2img — low strength locks gold outfit; use pure t2i for wardrobe swaps
 LORA=1 ./scripts/gen-img2img.sh \
   ../public/images/3cf63eb8-3338-46e3-9d8b-2d08d775ed4c.jpg \
-  "same woman, navy jumpsuit, studio soft light, full body" \
-  0.5
+  "same woman, navy jumpsuit, full body" \
+  0.45
 ```
 
-CLI equivalent:
+CLI:
 
 ```bash
 draw-things-cli generate \
   --model sd_xl_base_1.0_q6p_q8p.ckpt \
   --prompt "photo of prynshi woman, ..." \
-  --config-json '{"loras":[{"file":"prynshi-sdxl_400_lora_f32.ckpt","weight":1.0,"version":"sdxl_base_v0.9"}]}' \
+  --config-json '{"loras":[{"file":"prynshi-sdxl-v2_700_lora_f32.ckpt","weight":1.0,"version":"sdxl_base_v0.9"}]}' \
   --width 768 --height 1024 --output out.png
 ```
 
-Prefer full-body golds for outfit/pose changes.
+> **Gotcha:** img2img strength ≤0.7 on a strong full-body gold keeps scene/outfit. Prefer pure LoRA t2i for wardrobe changes.
 
 ## GUI
 

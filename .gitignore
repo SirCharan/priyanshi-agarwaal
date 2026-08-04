@@ -23,6 +23,10 @@
 # misc
 .DS_Store
 *.pem
+_live.png
+
+# local Draw Things outputs (curated copies live under public/images/)
+local-gen/outputs/
 
 # debug
 npm-debug.log*
@@ -39,3 +43,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+local-gen/[0-9A-F]*
