@@ -1,0 +1,5 @@
+outputs/
+*.png
+*.jpg
+!dataset/*
+dataset/*.jpg
