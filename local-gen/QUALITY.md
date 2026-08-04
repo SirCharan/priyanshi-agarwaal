@@ -39,3 +39,38 @@ If mustache returns: drop weight to **0.55–0.65**, keep negative, or use **img
 ## Realistic ceiling
 
 Local SDXL+LoRA will not match Grok Imagine on raw photoreal beauty. It **can** match **identity** for unlimited free bulk. Use Grok for hero frames; LoRA for volume after v3.
+
+## Why LoRA looked so bad vs Grok (2026-08-04)
+
+1. **Wrong job for the tool** — Grok Imagine is a large beauty-tuned model. Our LoRA sat on **SDXL 8-bit**, a much weaker base, trained on ~8–20 images.
+2. **Training poison** — multi-panel sheets + measurement-heavy captions; weight **1.0** → artifacts (mustache from upper-lip shadow).
+3. **Not actually nude** — SDXL + “nude” often keeps implied clothing / soft censorship in the base; Flux Klein local is freer and sharper for explicit.
+4. **Resolution** — 768×1024 looks soft next to Grok heroes.
+
+### Decision (user interview)
+- Priority: **quality over LoRA identity**
+- Stack: **Flux Klein 4B, no LoRA first**
+- Content: **fully nude, more explicit/seductive**
+- Ship only after **QC** at **~1080p** (1088×1472)
+- Keep LoRA v1–v3 as **history**; add **hero** Flux row on site
+
+### Hybrid Grok + Flux + LoRA (locked)
+See **[HYBRID.md](./HYBRID.md)** for full loop.
+
+| Role | Tool |
+|------|------|
+| Advisor + vision QC + prompt rewrite | **Grok** |
+| Fully nude @1088×1472 | **Flux Klein** local |
+| Identity bulk / history | **SDXL LoRA** |
+| Clothed beauty seeds | **Grok Imagine** (nudes often blocked) |
+
+Ship bar: **fully nude + looks OK**. Loop max 3 tries on fail.
+
+### Other models (prefer local uncensored)
+| Model | Why |
+|-------|-----|
+| **Flux Klein** (now) | On disk; better fidelity; local freer NSFW |
+| **Flux Dev / Schnell** (if VRAM) | Higher quality than Klein if it fits |
+| **Pony / RealVis / Juggernaut** | Explicit or photoreal checkpoints if Klein soft-censors (bra/pasties) |
+| **Grok Imagine** | Best beauty — **QC + clothed seeds only** |
+| Avoid for nudes | Midjourney, OpenAI, many hosted APIs (censor) |

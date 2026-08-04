@@ -158,10 +158,71 @@ const VER_BLURB: Record<BodyVer, string> = {
   v3: "Clean set · beauty captions · hourglass body",
 };
 
+/** Flux Klein hero plates @1088×1472 — ship as generated (QC optional) */
+export type HeroPlate = {
+  id: string;
+  src: string;
+  title: string;
+  note?: string;
+};
+
+export const FLUX_HERO_PLATES: HeroPlate[] = [
+  {
+    id: "flux-stand-front",
+    src: "/images/body-hero/flux-stand-front-seduce.png",
+    title: "Stand front · Flux",
+    note: "Flux Klein · 1088×1472 · ship raw",
+  },
+  {
+    id: "flux-stand-34",
+    src: "/images/body-hero/flux-stand-34-seduce.png",
+    title: "Stand 3/4 · Flux",
+    note: "Flux Klein · 1088×1472 · ship raw",
+  },
+  {
+    id: "flux-sit-spread",
+    src: "/images/body-hero/flux-sit-spread.png",
+    title: "Sit · Flux",
+    note: "Flux Klein · when ready",
+  },
+  {
+    id: "flux-on-back",
+    src: "/images/body-hero/flux-on-back.png",
+    title: "On back · Flux",
+    note: "Flux Klein · when ready",
+  },
+  {
+    id: "flux-from-behind",
+    src: "/images/body-hero/flux-from-behind.png",
+    title: "From behind · Flux",
+    note: "Flux Klein · when ready",
+  },
+  {
+    id: "flux-kneel",
+    src: "/images/body-hero/flux-kneel.png",
+    title: "Kneel · Flux",
+    note: "Flux Klein · when ready",
+  },
+  {
+    id: "flux-i2i-front",
+    src: "/images/body-hero/flux-i2i-front.png",
+    title: "i2i front · Flux",
+    note: "img2img from gold",
+  },
+  {
+    id: "flux-i2i-beauty-nude",
+    src: "/images/body-hero/flux-i2i-beauty-nude.png",
+    title: "i2i beauty nude · Flux",
+    note: "img2img face gold",
+  },
+];
+
 export default function BodyRefGallery() {
   const [filter, setFilter] = useState<"all" | BodyVer | BodyPose>("all");
   const [missing, setMissing] = useState<Record<string, boolean>>({});
   const [active, setActive] = useState<BodyRef | null>(null);
+  const [heroActive, setHeroActive] = useState<HeroPlate | null>(null);
+  const [heroMissing, setHeroMissing] = useState<Record<string, boolean>>({});
 
   const shots = useMemo(() => {
     return BODY_NUDE_PLATES.filter((s) => {
@@ -173,11 +234,78 @@ export default function BodyRefGallery() {
     });
   }, [filter, missing]);
 
+  const heroes = useMemo(
+    () => FLUX_HERO_PLATES.filter((h) => !heroMissing[h.id]),
+    [heroMissing],
+  );
+
   const countVer = (v: BodyVer) =>
     BODY_NUDE_PLATES.filter((s) => s.version === v && !missing[s.id]).length;
 
   return (
     <div>
+      {heroes.length > 0 ? (
+        <div className="mb-12">
+          <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
+                Flux hero · 1088×1472
+              </p>
+              <h3 className="mt-1 font-[family-name:var(--font-playfair)] text-xl text-ink">
+                Flux Klein nudes (ship as generated)
+              </h3>
+              <p className="mt-1 text-xs text-ink-soft">
+                Higher-res local Flux — not LoRA. Plates appear as they land;
+                QC not required for upload.
+              </p>
+            </div>
+            <span className="text-[11px] text-muted">
+              {heroes.length} live
+            </span>
+          </div>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            {heroes.map((h) => (
+              <button
+                key={h.id}
+                type="button"
+                onClick={() => setHeroActive(h)}
+                className="group overflow-hidden rounded-sm bg-card text-left ring-1 ring-accent/40 transition hover:ring-accent"
+              >
+                <div className="relative">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={h.src}
+                    alt={h.title}
+                    className="aspect-[3/4] w-full object-cover object-top"
+                    loading="lazy"
+                    onError={() =>
+                      setHeroMissing((m) => ({ ...m, [h.id]: true }))
+                    }
+                  />
+                  <span className="absolute left-2 top-2 rounded-full bg-accent px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-bg">
+                    Flux
+                  </span>
+                </div>
+                <div className="border-t border-line px-2.5 py-2">
+                  <p className="font-[family-name:var(--font-playfair)] text-sm text-ink">
+                    {h.title}
+                  </p>
+                  {h.note ? (
+                    <p className="text-[10px] text-muted">{h.note}</p>
+                  ) : null}
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      ) : null}
+
+      <div className="mb-4">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">
+          LoRA history · v1 / v2 / v3
+        </p>
+      </div>
+
       <div className="mb-8 grid gap-3 sm:grid-cols-3">
         {(["v1", "v2", "v3"] as const).map((v) => (
           <button
@@ -307,6 +435,42 @@ export default function BodyRefGallery() {
               type="button"
               className="absolute right-2 top-2 rounded-full bg-ink/70 px-3 py-1 text-xs text-bg"
               onClick={() => setActive(null)}
+            >
+              Close
+            </button>
+          </figure>
+        </div>
+      ) : null}
+
+      {heroActive ? (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/80 p-4"
+          role="dialog"
+          aria-modal
+          onClick={() => setHeroActive(null)}
+        >
+          <figure
+            className="relative max-h-[90vh] max-w-xl overflow-hidden rounded-sm bg-card shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={heroActive.src}
+              alt={heroActive.title}
+              className="max-h-[80vh] w-full object-contain"
+            />
+            <figcaption className="border-t border-line px-4 py-3 text-sm">
+              <p className="font-[family-name:var(--font-playfair)] text-ink">
+                Flux · {heroActive.title}
+              </p>
+              <p className="text-xs text-muted">
+                Flux Klein 4B · 1088×1472 · shipped as generated
+              </p>
+            </figcaption>
+            <button
+              type="button"
+              className="absolute right-2 top-2 rounded-full bg-ink/70 px-3 py-1 text-xs text-bg"
+              onClick={() => setHeroActive(null)}
             >
               Close
             </button>

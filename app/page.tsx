@@ -179,13 +179,13 @@ export default function Home() {
               Character lock · full nude body
             </p>
             <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl tracking-tight text-ink sm:text-4xl">
-              Full nude body · v1 / v2 / v3
+              Full nude body · Flux + LoRA
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Photoreal full-body nudes of her (local Draw Things +{" "}
-              <code className="text-xs">prynshi</code> LoRA) — not a 3D mesh.
-              Same poses across train versions so you can compare body and face
-              as LoRA improved. Filter by version or pose.
+              Top: Flux Klein heroes @1088×1472 (ship as generated). Below:
+              LoRA v1–v3 history from Draw Things +{" "}
+              <code className="text-xs">prynshi</code> — same poses across
+              trains. Not a 3D mesh.
             </p>
           </div>
           <BodyRefGallery />
