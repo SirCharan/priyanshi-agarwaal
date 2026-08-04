@@ -204,6 +204,42 @@ export const FLUX_GOLD_PLATES: HeroPlate[] = [
     title: "Kneel · gold i2i",
     note: "Flux · from Grok gold",
   },
+  {
+    id: "flux-gold-side",
+    src: "/images/body-hero/flux-gold-side.png",
+    title: "Side profile · gold i2i",
+    note: "Grok face → local body",
+  },
+  {
+    id: "flux-gold-arms-up",
+    src: "/images/body-hero/flux-gold-arms-up.png",
+    title: "Arms up · gold i2i",
+    note: "Grok face → local body",
+  },
+  {
+    id: "flux-gold-lean-forward",
+    src: "/images/body-hero/flux-gold-lean-forward.png",
+    title: "Lean forward · gold i2i",
+    note: "Grok face → local body",
+  },
+  {
+    id: "flux-gold-all-fours",
+    src: "/images/body-hero/flux-gold-all-fours.png",
+    title: "All fours · gold i2i",
+    note: "Grok face → local body",
+  },
+  {
+    id: "flux-gold-beauty-bust",
+    src: "/images/body-hero/flux-gold-beauty-bust.png",
+    title: "Beauty bust · gold i2i",
+    note: "Waist-up · face lock",
+  },
+  {
+    id: "flux-gold-sit-chair",
+    src: "/images/body-hero/flux-gold-sit-chair.png",
+    title: "Sit chair · gold i2i",
+    note: "Grok face → local body",
+  },
 ];
 
 /** LoRA secondary — same golds, side-by-side face compare */
@@ -242,6 +278,42 @@ export const LORA_GOLD_PLATES: HeroPlate[] = [
     id: "lora-gold-kneel",
     src: "/images/body-hero-lora/lora-gold-kneel.png",
     title: "Kneel · LoRA gold",
+    note: "prynshi-v3 i2i",
+  },
+  {
+    id: "lora-gold-side",
+    src: "/images/body-hero-lora/lora-gold-side.png",
+    title: "Side · LoRA gold",
+    note: "prynshi-v3 i2i",
+  },
+  {
+    id: "lora-gold-arms-up",
+    src: "/images/body-hero-lora/lora-gold-arms-up.png",
+    title: "Arms up · LoRA gold",
+    note: "prynshi-v3 i2i",
+  },
+  {
+    id: "lora-gold-lean-forward",
+    src: "/images/body-hero-lora/lora-gold-lean-forward.png",
+    title: "Lean · LoRA gold",
+    note: "prynshi-v3 i2i",
+  },
+  {
+    id: "lora-gold-all-fours",
+    src: "/images/body-hero-lora/lora-gold-all-fours.png",
+    title: "All fours · LoRA gold",
+    note: "prynshi-v3 i2i",
+  },
+  {
+    id: "lora-gold-beauty-bust",
+    src: "/images/body-hero-lora/lora-gold-beauty-bust.png",
+    title: "Beauty bust · LoRA gold",
+    note: "prynshi-v3 i2i",
+  },
+  {
+    id: "lora-gold-sit-chair",
+    src: "/images/body-hero-lora/lora-gold-sit-chair.png",
+    title: "Sit chair · LoRA gold",
     note: "prynshi-v3 i2i",
   },
 ];

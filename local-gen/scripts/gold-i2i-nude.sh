@@ -59,20 +59,27 @@ echo "Seeds ready @ ${LORA_W}x${LORA_H}"
 
 pose_prompt() {
   case "$1" in
-    stand-front) echo "full body standing facing camera, hand on hip, arched back, seductive soft smile, bedroom soft light" ;;
-    stand-34)    echo "full body three-quarter standing, looking at camera seductive, one hand in hair" ;;
-    sit)         echo "full body sitting on bed edge legs slightly apart seductive, fully nude explicit" ;;
-    on-back)     echo "lying on back on sheets fully nude, seductive look at camera, arched body" ;;
-    from-behind) echo "standing from behind looking over shoulder, fully nude, round ass emphasized" ;;
-    kneel)       echo "kneeling on bed fully nude, seductive pose looking up" ;;
+    stand-front)  echo "full body standing facing camera, hand on hip, arched back, seductive soft smile, bedroom soft light" ;;
+    stand-34)     echo "full body three-quarter standing, looking at camera seductive, one hand in hair" ;;
+    sit)          echo "full body sitting on bed edge legs slightly apart seductive, fully nude explicit" ;;
+    on-back)      echo "lying on back on sheets fully nude, seductive look at camera, arched body" ;;
+    from-behind)  echo "standing from behind looking over shoulder, fully nude, round ass emphasized" ;;
+    kneel)        echo "kneeling on bed fully nude, seductive pose looking up" ;;
+    side)         echo "full body true side profile standing nude, hourglass silhouette clear, soft light" ;;
+    arms-up)      echo "full body standing facing camera arms raised behind head, fully nude, arched back, seductive" ;;
+    lean-forward) echo "full body standing leaning slightly forward toward camera, fully nude, cleavage and face clear" ;;
+    all-fours)    echo "on all fours on bed from side-three-quarter, fully nude, looking at camera seductive" ;;
+    beauty-bust)  echo "waist-up portrait fully nude topless, bare breasts, same face close, soft beauty light" ;;
+    sit-chair)    echo "full body sitting on chair legs crossed then uncrossed soft, fully nude, elegant seductive" ;;
     *) echo "full body standing fully nude seductive studio"; ;;
   esac
 }
 
 seed_for_pose() {
   case "$1" in
-    from-behind) echo "$BODY" ;;
-    on-back|sit) echo "$FACE2" ;;
+    from-behind|all-fours) echo "$BODY" ;;
+    on-back|sit|sit-chair) echo "$FACE2" ;;
+    beauty-bust) echo "$FACE" ;;
     *) echo "$FACE" ;;
   esac
 }
@@ -109,6 +116,7 @@ two_pass_lora() {
 }
 
 POSES=(stand-front stand-34 sit on-back from-behind kneel)
+MORE=(side arms-up lean-forward all-fours beauty-bust sit-chair)
 MODE="${1:-lora}"
 ONLY="${2:-}"
 
@@ -117,17 +125,42 @@ case "$MODE" in
     two_pass_lora "${ONLY:-stand-front}"
     ;;
   lora|both|flux)
-    # flux/both collapse to lora until Draw Things Flux i2i is fixed
     if [[ "$MODE" == "flux" || "$MODE" == "both" ]]; then
       echo "NOTE: Flux Klein img2img aborts (ccv concat dim). Using SDXL+LoRA gold-i2i only."
     fi
     for id in "${POSES[@]}"; do
       [[ -n "$ONLY" && "$id" != "$ONLY" ]] && continue
+      # skip if already shipped (resume-friendly)
+      if [[ -f "$HERO_FLUX/flux-gold-${id}.png" && -z "$ONLY" && "${FORCE:-0}" != "1" ]]; then
+        echo "SKIP existing flux-gold-${id}.png"
+        continue
+      fi
+      two_pass_lora "$id"
+    done
+    ;;
+  more)
+    # extra poses only
+    for id in "${MORE[@]}"; do
+      [[ -n "$ONLY" && "$id" != "$ONLY" ]] && continue
+      if [[ -f "$HERO_FLUX/flux-gold-${id}.png" && "${FORCE:-0}" != "1" ]]; then
+        echo "SKIP existing flux-gold-${id}.png"
+        continue
+      fi
+      two_pass_lora "$id"
+    done
+    ;;
+  all)
+    FORCE="${FORCE:-0}"
+    for id in "${POSES[@]}" "${MORE[@]}"; do
+      if [[ -f "$HERO_FLUX/flux-gold-${id}.png" && "$FORCE" != "1" ]]; then
+        echo "SKIP existing flux-gold-${id}.png"
+        continue
+      fi
       two_pass_lora "$id"
     done
     ;;
   *)
-    echo "Usage: $0 smoke|lora|lora-one [pose]  (flux/both → lora until Flux i2i fixed)"
+    echo "Usage: $0 smoke|lora|more|all|lora-one [pose]"
     exit 1
     ;;
 esac
