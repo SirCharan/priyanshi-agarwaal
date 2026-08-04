@@ -1,6 +1,7 @@
 import ArchiveGrid from "@/components/ArchiveGrid";
-import BodyStudio from "@/components/BodyStudio";
+import BodyRefGallery from "@/components/BodyRefGallery";
 import Gallery from "@/components/Gallery";
+import LoraCompare from "@/components/LoraCompare";
 import { fashionPhotos } from "@/lib/photos";
 
 export default function Home() {
@@ -27,7 +28,10 @@ export default function Home() {
             Architecture
           </a>
           <a href="#body" className="transition hover:text-ink">
-            3D body
+            Nude body
+          </a>
+          <a href="#lora" className="transition hover:text-ink">
+            LoRA v1–v3
           </a>
           <a href="#archive" className="transition hover:text-ink">
             Archive
@@ -50,9 +54,10 @@ export default function Home() {
             </span>
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft sm:text-lg">
-            Fashion, workout, architecture sheets, full-anatomy 3D mannequin
-            (face expressions + clothing layers), and image archive — all on
-            one page. Face and body locked at 165&nbsp;cm · 86-64-90.
+            Fashion, workout, architecture sheets, photoreal nude body-reference
+            plates (her identity, no fake mesh mannequin), and full image
+            archive — all on one page. Face and body locked at 165&nbsp;cm ·
+            86-64-90.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
@@ -65,7 +70,7 @@ export default function Home() {
               href="#body"
               className="inline-flex cursor-pointer items-center rounded-full border border-line px-6 py-3 text-sm tracking-wide text-ink transition hover:border-ink/30"
             >
-              3D body model
+              Body reference
             </a>
             <p className="text-sm text-muted">
               {fashionPhotos.length} fashion frames
@@ -171,18 +176,42 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="mb-10 max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
-              Character lock · 3D
+              Character lock · full nude body
             </p>
             <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl tracking-tight text-ink sm:text-4xl">
-              Body model &amp; face
+              Full nude body · v1 / v2 / v3
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Full anatomy base (curves, breasts, nipples, glutes, camel toe) so
-              bikini and body-fit clothes wrap the same frame. Face presets:
-              eyes, mouth, smile — hair and skull stay locked.
+              Photoreal full-body nudes of her (local Draw Things +{" "}
+              <code className="text-xs">prynshi</code> LoRA) — not a 3D mesh.
+              Same poses across train versions so you can compare body and face
+              as LoRA improved. Filter by version or pose.
             </p>
           </div>
-          <BodyStudio />
+          <BodyRefGallery />
+        </div>
+      </section>
+
+      <section
+        id="lora"
+        className="border-t border-line py-16 sm:py-20"
+      >
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <div className="mb-10 max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
+              Local train · side by side
+            </p>
+            <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl tracking-tight text-ink sm:text-4xl">
+              LoRA v1 vs v2 vs v3
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+              Same prompt families across train versions so you can see the
+              delta: multipanel poison + weight 1.0 (v1) → more steps (v2) →
+              clean set, salon brows, hourglass captions, lower weight +
+              negatives (v3).
+            </p>
+          </div>
+          <LoraCompare />
         </div>
       </section>
 
@@ -205,7 +234,7 @@ export default function Home() {
           <p className="font-[family-name:var(--font-playfair)] text-ink">
             Priyanshi Agarwaal
           </p>
-          <p>Single-page gallery · identity-locked set · 3D body</p>
+          <p>Single-page gallery · identity-locked set · body reference</p>
         </div>
       </footer>
     </main>

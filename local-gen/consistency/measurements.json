@@ -1,19 +1,19 @@
 {
   "name": "prynshi",
   "displayName": "Priyanshi Agarwaal",
-  "version": 2,
+  "version": 3,
   "units": "cm",
   "height_cm": 165,
-  "weight_kg": 52,
-  "bust_cm": 86,
-  "underbust_cm": 72,
-  "waist_cm": 64,
-  "hips_cm": 90,
+  "weight_kg": 54,
+  "bust_cm": 92,
+  "underbust_cm": 74,
+  "waist_cm": 62,
+  "hips_cm": 98,
   "shoulder_width_cm": 38,
   "arm_length_cm": 58,
   "inseam_cm": 78,
   "outseam_cm": 98,
-  "thigh_cm": 48,
+  "thigh_cm": 52,
   "calf_cm": 33,
   "ankle_cm": 20,
   "neck_cm": 31,
@@ -31,10 +31,11 @@
     "eyes": "large almond dark brown",
     "nose": "straight soft tip",
     "lips": "full cupid bow",
-    "skin": "warm medium-tan golden undertone"
+    "skin": "warm medium-tan golden undertone",
+    "brows": "salon-groomed polished soft arch, clean even shape"
   },
-  "build": "slim-athletic",
-  "prompt_snippet": "165cm tall, 52kg, slim-athletic, 86-64-90 bust-waist-hip, long legs, narrow soft shoulders",
+  "build": "slim-thick hourglass",
+  "prompt_snippet": "165cm, 92-62-98 bust-waist-hip, full round breasts, tiny waist, wide hips round firm ass, salon-groomed polished eyebrows soft arch, cute hot feminine",
   "hair_lock": "same hair: near-black long S-waves, soft curtain bangs center-left part, mid-back length, crown volume, never stick-straight",
-  "identity_lock": "Exact same young South Asian woman named prynshi: long wavy near-black hair with soft curtain bangs that skim the eyebrows (center-left part, S-wave mid-length past shoulders), warm medium-tan skin with even golden undertone, large dark almond eyes, full naturally arched brows, straight nose with soft rounded tip, full lips with defined cupid's bow, oval face soft jaw short chin. Slim-athletic build 165 cm: bust 86 cm, underbust 72 cm, waist 64 cm, hips 90 cm, long legs, narrow-medium sloped shoulders. Keep face, hair color and wave pattern, skin tone, and these body proportions identical and unchanged in every pose."
+  "identity_lock": "photo of prynshi woman, beautiful hot cute young South Asian woman, soft feminine face, perfectly groomed salon eyebrows clean polished soft arch as if just from a salon, large dark almond eyes long lashes, smooth clear skin, clean smooth upper lip no mustache, full soft pink lips, long wavy near-black hair soft curtain bangs. Hot hourglass 165cm: bust 92 waist 62 hips 98, full round breasts, round firm ass."
 }

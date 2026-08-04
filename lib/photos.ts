@@ -176,6 +176,38 @@ export const photos: Photo[] = [
   },
 ];
 
+/** Photoreal nude body-reference plates (clothing-fit lock) */
+export const bodyRefs: Photo[] = [
+  {
+    id: "body-front-nude",
+    src: "/images/body-ref/body-front-nude.png",
+    title: "Body front · nude lock",
+    place: "Studio · full anatomy",
+    tag: "architecture",
+  },
+  {
+    id: "body-34-nude",
+    src: "/images/body-ref/body-34-nude.png",
+    title: "Body 3/4 · nude",
+    place: "Studio",
+    tag: "architecture",
+  },
+  {
+    id: "body-side-nude",
+    src: "/images/body-ref/body-side-nude.png",
+    title: "Body side · nude",
+    place: "Studio · silhouette",
+    tag: "architecture",
+  },
+  {
+    id: "body-back-nude",
+    src: "/images/body-ref/body-back-nude.png",
+    title: "Body back · nude",
+    place: "Studio · rear",
+    tag: "architecture",
+  },
+];
+
 /** Reproducible face/body architecture boards */
 export const architecture: Photo[] = [
   {

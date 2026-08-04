@@ -3,53 +3,47 @@
 Canonical identity bible for reproducible image generation and LoRA training.  
 Use this + golds in `public/images/` + sheets in `public/images/architecture/` + single-view plates in `local-gen/consistency/`.
 
-**Version:** v2 — measurements + multi-view face/body/hair lock (2026-08-04)
+**Version:** v3 — hotter hourglass lock (brows / bust / hips) + clean upper lip (2026-08-04)
 
 ---
 
 ## Identity lock (paste first in every prompt)
 
 ```
-Exact same young South Asian woman named prynshi: long wavy near-black hair with soft curtain bangs that skim the eyebrows (center-left part, S-wave mid-length past shoulders), warm medium-tan skin with even golden undertone, large dark almond eyes, full naturally arched brows, straight nose with soft rounded tip, full lips with defined cupid's bow, oval face soft jaw short chin. Slim-athletic build 165 cm: bust 86 cm, underbust 72 cm, waist 64 cm, hips 90 cm, long legs, narrow-medium sloped shoulders. Keep face, hair color and wave pattern, skin tone, and these body proportions identical and unchanged in every pose.
+photo of prynshi woman, beautiful hot cute young South Asian woman, soft feminine face, perfectly groomed salon eyebrows — clean shape, soft natural arch, polished and even as if just done at a salon (not thick bushy, not sparse pencil-thin, not unibrow), large dark almond eyes long lashes, smooth clear skin, clean smooth upper lip no facial hair no mustache no stubble, full soft pink lips, long wavy near-black hair soft curtain bangs center-left. Hot slim-thick hourglass body 165cm: full round breasts 92cm bust, tiny waist 62cm, wide hips and round firm ass 98cm hips, soft feminine curves, long legs. Keep this face and body identical in every pose.
 ```
 
 **LoRA token:** always include `prynshi` when the adapter is loaded.
 
 ---
 
-## Canonical body measurements (lock these)
+## Canonical body measurements (lock these) — v3 hotter
 
-Fashion-editorial slim-athletic. Numbers are the **source of truth** for prompts, LoRA captions, and the local 3D proportion mannequin (`local-gen/consistency/mannequin.html`).
+Slim-thick / soft hourglass (not skinny runway). Source of truth for captions + LoRA.
 
 | Metric | Value | Notes |
 |--------|-------|--------|
-| **Height** | **165 cm** (5′5″) | Fashion camera often reads slightly taller |
-| **Weight** | **52 kg** | Lean; not skinny-fragile, not muscular bulk |
-| **BMI band** | ~19.1 | Slim-athletic |
-| **Bust (full)** | **86 cm** | Soft natural chest; not exaggerated |
-| **Underbust** | **72 cm** | |
-| **Band / cup guide** | ~32B–C | For clothing prompts only |
-| **Waist** | **64 cm** | Defined, natural (no extreme hourglass) |
-| **Hips** | **90 cm** | Gentle curve; hip:waist ≈ 1.41 |
-| **Shoulder width** | **38 cm** | Biacromial, soft slope |
-| **Arm length (shoulder→wrist)** | **58 cm** | Slim arms, no bulk |
-| **Inseam** | **78 cm** | Long-legged vs torso |
-| **Outseam** | **98 cm** | |
-| **Thigh (mid)** | **48 cm** | Athletic, not thick |
-| **Calf** | **33 cm** | Slim |
-| **Ankle** | **20 cm** | |
-| **Neck** | **31 cm** | Long, elegant |
-| **Torso (CS7–hip)** | ~42 cm | Medium torso, longer legs |
-| **Shoe** | EU 38 / US 7.5 | Slim foot |
-| **Hand** | Slim fingers, modest nails | No claw poses |
+| **Height** | **165 cm** (5′5″) | |
+| **Weight** | **54 kg** | Soft curves, not bulk |
+| **Bust (full)** | **92 cm** | Full round chest; ~34C–D look |
+| **Underbust** | **74 cm** | |
+| **Band / cup guide** | ~34C–D | Clothing prompts |
+| **Waist** | **62 cm** | Small, defined |
+| **Hips** | **98 cm** | Wide hip, round glutes |
+| **Hip:waist** | ~1.58 | Clear hourglass |
+| **Glutes** | Full, round, lifted | Visible in fitted / rear views |
+| **Shoulder width** | **37 cm** | Soft slope |
+| **Thigh (mid)** | **52 cm** | Soft athletic, not skinny |
+| **Inseam** | **78 cm** | Long legs |
+| **Neck** | **31 cm** | Elegant |
 
-### Measurement prompt snippet
+### Measurement / hotness prompt snippet
 
 ```
-165cm tall, 52kg, slim-athletic, 86-64-90 bust-waist-hip, long legs, narrow soft shoulders
+165cm, 92-62-98 bust-waist-hip, full round breasts, tiny waist, wide hips round firm ass, salon-groomed polished eyebrows soft arch, cute hot feminine
 ```
 
-**Do not** thicken arms, widen jaw, lighten skin, straighten hair stick-straight, age her, or inflate bust/hips past the table.
+**Do not** give bushy thick brows, sparse/uneven brows, flat chest, boyish hips, mustache/stubble, masculine jaw, or stick-straight hair.
 
 ---
 
@@ -57,17 +51,17 @@ Fashion-editorial slim-athletic. Numbers are the **source of truth** for prompts
 
 | Region | Spec |
 |--------|------|
-| **Face shape** | Oval; medium forehead; soft jaw; short rounded chin |
+| **Face shape** | Oval; soft jaw; short rounded chin; cute not hard |
 | **Hairline** | Natural rounded; no hard widow’s peak |
 | **Bangs** | Soft curtain bangs, center-left part, skim brows; airy not blunt |
-| **Hair** | Near-black / very dark brown; mid-back length; loose S-waves; crown volume; flyaways OK in wind; **same part + wave pattern from front, 3/4, profile, back** |
-| **Brows** | Full natural arch, dark; slight lift outer third |
-| **Eyes** | Large almond; dark brown; long lashes; mild lid fold; warm catchlights |
-| **Nose** | Straight bridge, soft tip, small refined nostrils |
-| **Lips** | Full; soft pink-nude; defined cupid’s bow |
+| **Hair** | Near-black; mid-back; loose S-waves; crown volume |
+| **Brows** | **Salon-finished:** clean, polished, even shape; soft refined arch; professional grooming — as if just left a salon. Not bushy/thick, not sparse/pencil, not unibrow, not overplucked gaps |
+| **Eyes** | Large almond; dark brown; long lashes; warm catchlights |
+| **Nose** | Straight soft tip, refined |
+| **Lips** | Full soft pink; defined cupid’s bow |
+| **Upper lip** | **Smooth, hairless** — never stubble/mustache |
 | **Cheeks** | Soft high cheekbones; apple when smiling |
-| **Ears** | Small; often half-hidden by waves |
-| **Makeup** | Natural fashion glow; no heavy contour unless shot asks |
+| **Makeup** | Soft glam glow, subtle liner, natural flush — pretty/hot editorial |
 
 ### Face multi-view checklist (generate as **separate** images, not one grid)
 
@@ -157,20 +151,17 @@ LORA=1 ./scripts/gen.sh "photo of prynshi woman, 165cm 86-64-90 slim-athletic, [
 
 **Production (single page):** https://priyanshi-agarwaal.vercel.app/#body
 
-Everything lives on **one page** (`/`) — gallery, workout, architecture, 3D studio, archive. No separate routes.
+Everything lives on **one page** (`/`) — gallery, workout, architecture, **photoreal body-ref plates**, archive.
 
-- **Base body:** full anatomy for clothing QA — lathed 86-64-90 curves, breasts + nipples, glutes, mons/camel-toe ridge.
-- **Outfit layers:** full anatomy · bikini · fitted · loose (same skeleton).
-- **Face expressions:** eyes open / half / closed · mouth closed / soft-open / open · smile none / soft / full.
-- **Hair:** mid-back S-wave + curtain bangs locked on every expression.
-
-Local offline mannequin:
+- **Body reference:** `public/images/body-ref/` — multi-angle **nude photoreal** plates of her (front / 3/4 / side / back), same LoRA identity as gallery. Used as clothing-fit lock. No mesh mannequin.
+- **Hair / face:** locked to golds + `prynshi` LoRA; regenerate body-ref if face drifts.
 
 ```bash
-open local-gen/consistency/mannequin.html
+# Regenerate local nude body plates (Draw Things + LoRA)
+# see local-gen/scripts or session notes
 ```
 
-If a generated image reads wider hips, shorter legs, or a different face under a new expression, discard or retrain.
+If a generated outfit image changes hips, legs, or face vs body-ref plates, discard.
 
 ---
 
