@@ -1,8 +1,6 @@
 import ArchiveGrid from "@/components/ArchiveGrid";
 import Gallery from "@/components/Gallery";
-import VideoStrip from "@/components/VideoStrip";
 import { fashionPhotos } from "@/lib/photos";
-import { clips } from "@/lib/videos";
 
 export default function Home() {
   const hasPhotos = fashionPhotos.length > 0;
@@ -27,9 +25,6 @@ export default function Home() {
           <a href="#architecture" className="transition hover:text-ink">
             Architecture
           </a>
-          <a href="#video" className="transition hover:text-ink">
-            Video
-          </a>
           <a href="#archive" className="transition hover:text-ink">
             Archive
           </a>
@@ -51,8 +46,8 @@ export default function Home() {
             </span>
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft sm:text-lg">
-            Fashion, workout, architecture sheets, motion clips, and a full
-            image archive. Face and body locked at 165&nbsp;cm ·
+            Fashion, workout, architecture sheets, and a full image archive.
+            Face locked to the Grok gold. 165&nbsp;cm ·
             86-64-90.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -63,10 +58,10 @@ export default function Home() {
               Browse the set
             </a>
             <a
-              href="#video"
+              href="#workout"
               className="inline-flex cursor-pointer items-center rounded-full border border-line px-6 py-3 text-sm tracking-wide text-ink transition hover:border-ink/30"
             >
-              Video
+              Workout
             </a>
             <p className="text-sm text-muted">
               {fashionPhotos.length} fashion frames
@@ -165,28 +160,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="video"
-        className="border-t border-line py-16 sm:py-20"
-      >
-        <div className="mx-auto max-w-6xl px-5 sm:px-8">
-          <div className="mb-10 max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
-              Still to motion
-            </p>
-            <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl tracking-tight text-ink sm:text-4xl">
-              Video
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Image-to-video from gold stills. Pose is already in the frame;
-              the model only adds motion. {clips.length} clip
-              {clips.length === 1 ? "" : "s"} so far.
-            </p>
-          </div>
-          <VideoStrip />
-        </div>
-      </section>
-
       <section id="archive" className="border-t border-line py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="mb-8">
@@ -206,7 +179,7 @@ export default function Home() {
           <p className="font-[family-name:var(--font-playfair)] text-ink">
             Priyanshi Agarwaal
           </p>
-          <p>Single-page gallery · identity-locked set · body · video</p>
+          <p>Single-page gallery · identity-locked set</p>
         </div>
       </footer>
     </main>

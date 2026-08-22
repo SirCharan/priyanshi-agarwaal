@@ -214,52 +214,6 @@ export const photos: Photo[] = [
     place: "Beige cashmere · beauty",
     tag: "fashion",
   },
-  {
-    id: "312ac49f",
-    src: "/images/312ac49f-fc1e-458f-83d9-3d1e0a2cc316.jpg",
-    title: "Fashion Frame I",
-    place: "Grok Imagine",
-    tag: "fashion",
-  },
-  {
-    id: "76e1356d",
-    src: "/images/76e1356d-e141-4bc4-962f-b73f8a63681e.jpg",
-    title: "Fashion Frame II",
-    place: "Grok Imagine · angle study",
-    tag: "fashion",
-  },
-];
-
-/** Photoreal nude body-reference plates (clothing-fit lock) */
-export const bodyRefs: Photo[] = [
-  {
-    id: "body-front-nude",
-    src: "/images/body-ref/body-front-nude.png",
-    title: "Body front · nude lock",
-    place: "Studio · full anatomy",
-    tag: "architecture",
-  },
-  {
-    id: "body-34-nude",
-    src: "/images/body-ref/body-34-nude.png",
-    title: "Body 3/4 · nude",
-    place: "Studio",
-    tag: "architecture",
-  },
-  {
-    id: "body-side-nude",
-    src: "/images/body-ref/body-side-nude.png",
-    title: "Body side · nude",
-    place: "Studio · silhouette",
-    tag: "architecture",
-  },
-  {
-    id: "body-back-nude",
-    src: "/images/body-ref/body-back-nude.png",
-    title: "Body back · nude",
-    place: "Studio · rear",
-    tag: "architecture",
-  },
 ];
 
 /** Reproducible face/body architecture boards */
@@ -296,13 +250,6 @@ export const architecture: Photo[] = [
 
 /** Identity-locked workout / fitness set (modest athletic wear) */
 export const workout: Photo[] = [
-  {
-    id: "wo-01",
-    src: "/images/workout/wo-01-run-profile.jpg",
-    title: "Run Profile",
-    place: "Outdoor · golden hour",
-    tag: "workout",
-  },
   {
     id: "wo-02",
     src: "/images/workout/wo-02-gym-squat.jpg",
