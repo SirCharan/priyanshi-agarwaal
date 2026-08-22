@@ -20,7 +20,12 @@ const filters: { id: FilterId; label: string }[] = [
 ];
 
 function downloadHref(id: string) {
-  return `/api/download?id=${encodeURIComponent(id)}`;
+  return `/downloads/${id}-fhd.jpg`;
+}
+
+function downloadName(title: string) {
+  const slug = title.replace(/[^a-zA-Z0-9]+/g, "-").replace(/^-|-$/g, "");
+  return `Priyanshi-Agarwaal-${slug}-FHD.jpg`;
 }
 
 function DownloadLink({
@@ -36,7 +41,7 @@ function DownloadLink({
   return (
     <a
       href={downloadHref(id)}
-      download
+      download={downloadName(title)}
       aria-label={`Download ${title} in Full HD`}
       onClick={(e) => e.stopPropagation()}
       className={
