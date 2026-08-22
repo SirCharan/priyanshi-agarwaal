@@ -133,10 +133,30 @@ export default function Home() {
               Yellow garden
             </h2>
             <p className="mt-3 max-w-lg text-sm leading-relaxed text-ink-soft">
-              Same sundress, same public-park path. Original stand plus five
-              pose edits.
+              Same sundress, same public-park path. A walk clip, then the
+              stills.
             </p>
           </div>
+          <figure className="mb-12 max-w-md overflow-hidden rounded-sm bg-card ring-1 ring-line">
+            <video
+              className="block h-auto w-full bg-ink"
+              controls
+              playsInline
+              loop
+              muted
+              autoPlay
+              poster="/images/gen-44-yellow-walk.jpg"
+              src="/videos/garden-walk.mp4"
+            />
+            <figcaption className="border-t border-line px-4 py-3">
+              <p className="font-[family-name:var(--font-playfair)] text-lg text-ink">
+                Park walk
+              </p>
+              <p className="mt-0.5 text-xs tracking-wide text-muted">
+                Same sundress · same path
+              </p>
+            </figcaption>
+          </figure>
           <Gallery mode="sundress" />
         </div>
       </section>
