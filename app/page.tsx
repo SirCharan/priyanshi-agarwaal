@@ -133,7 +133,7 @@ export default function Home() {
               Yellow garden
             </h2>
             <p className="mt-3 max-w-lg text-sm leading-relaxed text-ink-soft">
-              Same sundress, same tropical path. Original stand plus five
+              Same sundress, same public-park path. Original stand plus five
               pose edits.
             </p>
           </div>

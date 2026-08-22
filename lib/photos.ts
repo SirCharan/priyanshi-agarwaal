@@ -295,7 +295,7 @@ export const photos: Photo[] = [
     id: "3cf63eb8",
     src: "/images/3cf63eb8-3338-46e3-9d8b-2d08d775ed4c.jpg",
     title: "Yellow Floral Sundress",
-    place: "Tropical garden · full front",
+    place: "Tree-lined park · full front",
     tag: "fashion",
   },
   {
@@ -420,34 +420,34 @@ export const workout: Photo[] = [
   },
 ];
 
-/** Same yellow sundress, same garden — original stand plus five pose edits */
+/** Same yellow sundress, same public-park path — original stand plus five pose edits */
 export const sundress: Photo[] = [
   {
     id: "garden-hero",
     src: "/images/3cf63eb8-3338-46e3-9d8b-2d08d775ed4c.jpg",
     title: "Front stand",
-    place: "Yellow floral · tropical garden",
+    place: "Yellow floral · tree-lined park",
     tag: "fashion",
   },
   {
     id: "gen-41",
     src: "/images/gen-41-yellow-34.jpg",
     title: "Three-quarter",
-    place: "Same dress · garden path",
+    place: "Same dress · park path",
     tag: "fashion",
   },
   {
     id: "gen-42",
     src: "/images/gen-42-yellow-sit.jpg",
     title: "Garden sit",
-    place: "Stone ledge · same garden",
+    place: "Stone bench · same park",
     tag: "fashion",
   },
   {
     id: "gen-43",
     src: "/images/gen-43-yellow-hip.jpg",
     title: "Hand on hip",
-    place: "Same dress · garden path",
+    place: "Same dress · park path",
     tag: "fashion",
   },
   {
@@ -461,7 +461,7 @@ export const sundress: Photo[] = [
     id: "gen-45",
     src: "/images/gen-45-yellow-lookback.jpg",
     title: "Look back",
-    place: "Over-shoulder · same garden",
+    place: "Over-shoulder · same park",
     tag: "fashion",
   },
 ];
