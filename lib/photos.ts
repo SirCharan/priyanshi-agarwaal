@@ -93,6 +93,34 @@ export const photos: Photo[] = [
     place: "Dynamic 3/4 · golden rim",
     tag: "fashion",
   },
+  {
+    id: "gen-13",
+    src: "/images/gen-13-laugh.jpg",
+    title: "Laugh",
+    place: "Close front · tropical bokeh",
+    tag: "fashion",
+  },
+  {
+    id: "gen-14",
+    src: "/images/gen-14-serene.jpg",
+    title: "Serene",
+    place: "Eyes closed · same knit",
+    tag: "fashion",
+  },
+  {
+    id: "gen-15",
+    src: "/images/gen-15-34-look.jpg",
+    title: "Three-quarter look",
+    place: "3/4 · off-camera",
+    tag: "fashion",
+  },
+  {
+    id: "gen-16",
+    src: "/images/gen-16-profile.jpg",
+    title: "Profile",
+    place: "Left profile · tropical",
+    tag: "fashion",
+  },
 
   // Original Grok Imagine set
   {
