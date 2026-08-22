@@ -19,6 +19,37 @@ const filters: { id: FilterId; label: string }[] = [
   { id: "architecture", label: "Architecture" },
 ];
 
+function downloadHref(id: string) {
+  return `/api/download?id=${encodeURIComponent(id)}`;
+}
+
+function DownloadLink({
+  id,
+  title,
+  variant,
+}: {
+  id: string;
+  title: string;
+  variant: "card" | "lightbox";
+}) {
+  const light = variant === "lightbox";
+  return (
+    <a
+      href={downloadHref(id)}
+      download
+      aria-label={`Download ${title} in Full HD`}
+      onClick={(e) => e.stopPropagation()}
+      className={
+        light
+          ? "cursor-pointer rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-sm text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          : "cursor-pointer rounded-full border border-ink/20 bg-card/95 px-3 py-1.5 text-sm text-ink shadow-[0_1px_0_rgba(26,22,20,0.06)] backdrop-blur-sm transition hover:border-ink/40 hover:bg-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      }
+    >
+      Download HD
+    </a>
+  );
+}
+
 export default function Gallery({
   mode = "fashion",
 }: {
@@ -34,6 +65,7 @@ export default function Gallery({
   }, [mode]);
 
   const showFilters = mode === "all";
+  const canDownload = mode === "sundress";
   const [filter, setFilter] = useState<FilterId>("all");
   const [active, setActive] = useState<Photo | null>(null);
 
@@ -115,17 +147,19 @@ export default function Gallery({
 
       <div className="masonry">
         {list.map((photo, i) => (
-          <button
+          <article
             key={photo.id}
-            type="button"
-            onClick={() => open(photo)}
-            className="masonry-item group relative w-full cursor-pointer overflow-hidden rounded-sm bg-card text-left shadow-[0_1px_0_rgba(26,22,20,0.04)] ring-1 ring-line/70 transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-24px_rgba(26,22,20,0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="masonry-item group relative w-full overflow-hidden rounded-sm bg-card shadow-[0_1px_0_rgba(26,22,20,0.04)] ring-1 ring-line/70 transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-24px_rgba(26,22,20,0.45)]"
             style={{
               animation: "fade-up 0.55s ease both",
               animationDelay: `${Math.min(i, 10) * 40}ms`,
             }}
           >
-            <div className="relative w-full overflow-hidden">
+            <button
+              type="button"
+              onClick={() => open(photo)}
+              className="relative w-full cursor-pointer overflow-hidden text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
               <Image
                 src={photo.src}
                 alt={photo.title}
@@ -145,8 +179,17 @@ export default function Gallery({
                   </p>
                 ) : null}
               </div>
-            </div>
-          </button>
+            </button>
+            {canDownload ? (
+              <div className="absolute right-3 top-3 z-10">
+                <DownloadLink
+                  id={photo.id}
+                  title={photo.title}
+                  variant="card"
+                />
+              </div>
+            ) : null}
+          </article>
         ))}
       </div>
 
@@ -158,13 +201,22 @@ export default function Gallery({
           className="fixed inset-0 z-40 flex items-center justify-center bg-ink/88 p-4 backdrop-blur-sm sm:p-8"
           onClick={close}
         >
-          <button
-            type="button"
-            onClick={close}
-            className="absolute right-4 top-4 z-50 cursor-pointer rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-sm text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-          >
-            Close
-          </button>
+          <div className="absolute right-4 top-4 z-50 flex items-center gap-2">
+            {canDownload ? (
+              <DownloadLink
+                id={active.id}
+                title={active.title}
+                variant="lightbox"
+              />
+            ) : null}
+            <button
+              type="button"
+              onClick={close}
+              className="cursor-pointer rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-sm text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              Close
+            </button>
+          </div>
           <button
             type="button"
             aria-label="Previous"
