@@ -121,6 +121,62 @@ export const photos: Photo[] = [
     place: "Left profile · tropical",
     tag: "fashion",
   },
+  {
+    id: "gen-17",
+    src: "/images/gen-17-saree.jpg",
+    title: "Maroon Saree",
+    place: "Golden-hour garden",
+    tag: "fashion",
+  },
+  {
+    id: "gen-18",
+    src: "/images/gen-18-lehenga.jpg",
+    title: "Ivory Lehenga",
+    place: "Marble hall · crop choli",
+    tag: "fashion",
+  },
+  {
+    id: "gen-19",
+    src: "/images/gen-19-sequin.jpg",
+    title: "Black Sequin",
+    place: "Terrace night · party",
+    tag: "fashion",
+  },
+  {
+    id: "gen-20",
+    src: "/images/gen-20-backless.jpg",
+    title: "Champagne Satin",
+    place: "Party light · low neck",
+    tag: "fashion",
+  },
+  {
+    id: "gen-21",
+    src: "/images/gen-21-slit-saree.jpg",
+    title: "Emerald Slit Saree",
+    place: "Evening hall",
+    tag: "fashion",
+  },
+  {
+    id: "gen-22",
+    src: "/images/gen-22-sharara.jpg",
+    title: "Mint Sharara",
+    place: "Courtyard · crop blouse",
+    tag: "fashion",
+  },
+  {
+    id: "gen-23",
+    src: "/images/gen-23-red-lehenga.jpg",
+    title: "Red Mirror Lehenga",
+    place: "Banquet · party",
+    tag: "fashion",
+  },
+  {
+    id: "gen-24",
+    src: "/images/gen-24-silver.jpg",
+    title: "Silver Bodycon",
+    place: "Club rim light",
+    tag: "fashion",
+  },
 
   // Original Grok Imagine set
   {
