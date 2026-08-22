@@ -1,5 +1,4 @@
 import ArchiveGrid from "@/components/ArchiveGrid";
-import BodyRefGallery from "@/components/BodyRefGallery";
 import Gallery from "@/components/Gallery";
 import VideoStrip from "@/components/VideoStrip";
 import { fashionPhotos } from "@/lib/photos";
@@ -28,9 +27,6 @@ export default function Home() {
           <a href="#architecture" className="transition hover:text-ink">
             Architecture
           </a>
-          <a href="#body" className="transition hover:text-ink">
-            Nude body
-          </a>
           <a href="#video" className="transition hover:text-ink">
             Video
           </a>
@@ -55,9 +51,8 @@ export default function Home() {
             </span>
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft sm:text-lg">
-            Fashion, workout, architecture sheets, photoreal nude body-reference
-            plates (her identity, no fake mesh mannequin), motion clips, and
-            full image archive. Face and body locked at 165&nbsp;cm ·
+            Fashion, workout, architecture sheets, motion clips, and a full
+            image archive. Face and body locked at 165&nbsp;cm ·
             86-64-90.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -68,10 +63,10 @@ export default function Home() {
               Browse the set
             </a>
             <a
-              href="#body"
+              href="#video"
               className="inline-flex cursor-pointer items-center rounded-full border border-line px-6 py-3 text-sm tracking-wide text-ink transition hover:border-ink/30"
             >
-              Body reference
+              Video
             </a>
             <p className="text-sm text-muted">
               {fashionPhotos.length} fashion frames
@@ -167,27 +162,6 @@ export default function Home() {
             </p>
           </div>
           <Gallery mode="architecture" />
-        </div>
-      </section>
-
-      <section
-        id="body"
-        className="border-t border-line/80 bg-bg-deep/40 py-16 sm:py-20"
-      >
-        <div className="mx-auto max-w-6xl px-5 sm:px-8">
-          <div className="mb-10 max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
-              Character lock · full nude body
-            </p>
-            <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl tracking-tight text-ink sm:text-4xl">
-              Full nude body · gold i2i
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Heroes start from <strong>Grok face pixels</strong> (img2img
-              two-pass), not text invent. Not a 3D mesh.
-            </p>
-          </div>
-          <BodyRefGallery />
         </div>
       </section>
 

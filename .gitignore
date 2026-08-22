@@ -30,6 +30,7 @@ local-gen/outputs/
 local-gen/video/
 # LoRA plates pulled off Vercel — stay on disk only
 local-gen/off-vercel/
+public/images/body-hero/
 
 # debug
 npm-debug.log*
