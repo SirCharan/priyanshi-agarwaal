@@ -27,6 +27,9 @@ _live.png
 
 # local Draw Things outputs (curated copies live under public/images/)
 local-gen/outputs/
+local-gen/video/
+# LoRA plates pulled off Vercel — stay on disk only
+local-gen/off-vercel/
 
 # debug
 npm-debug.log*

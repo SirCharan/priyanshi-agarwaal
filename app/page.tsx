@@ -1,8 +1,9 @@
 import ArchiveGrid from "@/components/ArchiveGrid";
 import BodyRefGallery from "@/components/BodyRefGallery";
 import Gallery from "@/components/Gallery";
-import LoraCompare from "@/components/LoraCompare";
+import VideoStrip from "@/components/VideoStrip";
 import { fashionPhotos } from "@/lib/photos";
+import { clips } from "@/lib/videos";
 
 export default function Home() {
   const hasPhotos = fashionPhotos.length > 0;
@@ -30,8 +31,8 @@ export default function Home() {
           <a href="#body" className="transition hover:text-ink">
             Nude body
           </a>
-          <a href="#lora" className="transition hover:text-ink">
-            LoRA v1–v3
+          <a href="#video" className="transition hover:text-ink">
+            Video
           </a>
           <a href="#archive" className="transition hover:text-ink">
             Archive
@@ -55,8 +56,8 @@ export default function Home() {
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft sm:text-lg">
             Fashion, workout, architecture sheets, photoreal nude body-reference
-            plates (her identity, no fake mesh mannequin), and full image
-            archive — all on one page. Face and body locked at 165&nbsp;cm ·
+            plates (her identity, no fake mesh mannequin), motion clips, and
+            full image archive. Face and body locked at 165&nbsp;cm ·
             86-64-90.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -183,8 +184,7 @@ export default function Home() {
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
               Heroes start from <strong>Grok face pixels</strong> (img2img
-              two-pass), not text invent. Flux primary + LoRA compare. Below:
-              LoRA train history v1–v3. Not a 3D mesh.
+              two-pass), not text invent. Not a 3D mesh.
             </p>
           </div>
           <BodyRefGallery />
@@ -192,25 +192,24 @@ export default function Home() {
       </section>
 
       <section
-        id="lora"
+        id="video"
         className="border-t border-line py-16 sm:py-20"
       >
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="mb-10 max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
-              Local train · side by side
+              Still to motion
             </p>
             <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl tracking-tight text-ink sm:text-4xl">
-              LoRA v1 vs v2 vs v3
+              Video
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Same prompt families across train versions so you can see the
-              delta: multipanel poison + weight 1.0 (v1) → more steps (v2) →
-              clean set, salon brows, hourglass captions, lower weight +
-              negatives (v3).
+              Image-to-video from gold stills. Pose is already in the frame;
+              the model only adds motion. {clips.length} clip
+              {clips.length === 1 ? "" : "s"} so far.
             </p>
           </div>
-          <LoraCompare />
+          <VideoStrip />
         </div>
       </section>
 
@@ -233,7 +232,7 @@ export default function Home() {
           <p className="font-[family-name:var(--font-playfair)] text-ink">
             Priyanshi Agarwaal
           </p>
-          <p>Single-page gallery · identity-locked set · body reference</p>
+          <p>Single-page gallery · identity-locked set · body · video</p>
         </div>
       </footer>
     </main>
