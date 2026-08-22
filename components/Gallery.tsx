@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   architecture,
   fashionPhotos,
+  sundressPhotos,
   workoutPhotos,
   type Photo,
 } from "@/lib/photos";
@@ -21,11 +22,12 @@ const filters: { id: FilterId; label: string }[] = [
 export default function Gallery({
   mode = "fashion",
 }: {
-  mode?: "fashion" | "architecture" | "workout" | "all";
+  mode?: "fashion" | "architecture" | "workout" | "sundress" | "all";
 }) {
   const baseList = useMemo(() => {
     if (mode === "architecture") return architecture;
     if (mode === "workout") return workoutPhotos;
+    if (mode === "sundress") return sundressPhotos;
     if (mode === "all")
       return [...fashionPhotos, ...workoutPhotos, ...architecture];
     return fashionPhotos;

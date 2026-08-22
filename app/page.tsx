@@ -19,6 +19,9 @@ export default function Home() {
           <a href="#gallery" className="transition hover:text-ink">
             Gallery
           </a>
+          <a href="#garden" className="transition hover:text-ink">
+            Garden
+          </a>
           <a href="#workout" className="transition hover:text-ink">
             Workout
           </a>
@@ -114,6 +117,27 @@ export default function Home() {
             </p>
           </div>
           <Gallery mode="fashion" />
+        </div>
+      </section>
+
+      <section
+        id="garden"
+        className="border-t border-line py-16 sm:py-20"
+      >
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <div className="mb-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
+              Look
+            </p>
+            <h2 className="mt-2 font-[family-name:var(--font-playfair)] text-3xl tracking-tight text-ink sm:text-4xl">
+              Yellow garden
+            </h2>
+            <p className="mt-3 max-w-lg text-sm leading-relaxed text-ink-soft">
+              Same sundress, same tropical path. Original stand plus five
+              pose edits.
+            </p>
+          </div>
+          <Gallery mode="sundress" />
         </div>
       </section>
 

@@ -420,5 +420,52 @@ export const workout: Photo[] = [
   },
 ];
 
+/** Same yellow sundress, same garden — original stand plus five pose edits */
+export const sundress: Photo[] = [
+  {
+    id: "garden-hero",
+    src: "/images/3cf63eb8-3338-46e3-9d8b-2d08d775ed4c.jpg",
+    title: "Front stand",
+    place: "Yellow floral · tropical garden",
+    tag: "fashion",
+  },
+  {
+    id: "gen-41",
+    src: "/images/gen-41-yellow-34.jpg",
+    title: "Three-quarter",
+    place: "Same dress · garden path",
+    tag: "fashion",
+  },
+  {
+    id: "gen-42",
+    src: "/images/gen-42-yellow-sit.jpg",
+    title: "Garden sit",
+    place: "Stone ledge · same garden",
+    tag: "fashion",
+  },
+  {
+    id: "gen-43",
+    src: "/images/gen-43-yellow-hip.jpg",
+    title: "Hand on hip",
+    place: "Same dress · garden path",
+    tag: "fashion",
+  },
+  {
+    id: "gen-44",
+    src: "/images/gen-44-yellow-walk.jpg",
+    title: "Walk",
+    place: "Mid-stride · skirt in motion",
+    tag: "fashion",
+  },
+  {
+    id: "gen-45",
+    src: "/images/gen-45-yellow-lookback.jpg",
+    title: "Look back",
+    place: "Over-shoulder · same garden",
+    tag: "fashion",
+  },
+];
+
 export const fashionPhotos = photos.filter((p) => p.tag === "fashion");
 export const workoutPhotos = workout;
+export const sundressPhotos = sundress;
