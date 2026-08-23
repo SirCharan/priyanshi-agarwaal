@@ -460,6 +460,34 @@ export const workout: Photo[] = [
     place: "Start of the pull",
     tag: "workout",
   },
+  {
+    id: "wo-16",
+    src: "/images/workout/wo-16-barbell-squat.jpg",
+    title: "Barbell squat",
+    place: "Sports bra · bottom of the hole",
+    tag: "workout",
+  },
+  {
+    id: "wo-17",
+    src: "/images/workout/wo-17-barbell-stand.jpg",
+    title: "Barbell stand",
+    place: "Top of the back squat",
+    tag: "workout",
+  },
+  {
+    id: "wo-18",
+    src: "/images/workout/wo-18-barbell-walkout.jpg",
+    title: "Barbell walkout",
+    place: "Sweaty · bar on her back",
+    tag: "workout",
+  },
+  {
+    id: "wo-19",
+    src: "/images/workout/wo-19-barbell-34.jpg",
+    title: "Barbell three-quarter",
+    place: "Side · same lift",
+    tag: "workout",
+  },
 ];
 
 /** Same yellow sundress, same public-park path — original stand plus five pose edits */

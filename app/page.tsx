@@ -174,9 +174,8 @@ export default function Home() {
               Workout
             </h2>
             <p className="mt-3 max-w-lg text-sm leading-relaxed text-ink-soft">
-              Identity-locked training frames — same face and body, modest
-              athletic wear. Squat, boxing, and row now have mid-rep stills
-              plus a squat clip.
+              Identity-locked training frames. Barbell back squat in a sports
+              bra and shorts, plus the earlier gym set.
             </p>
           </div>
           <figure className="mb-12 max-w-md overflow-hidden rounded-sm bg-card ring-1 ring-line">
@@ -187,15 +186,15 @@ export default function Home() {
               loop
               muted
               autoPlay
-              poster="/images/workout/wo-11-squat-deep.jpg"
-              src="/videos/gym-squat.mp4"
+              poster="/images/workout/wo-16-barbell-squat.jpg"
+              src="/videos/barbell-squat.mp4"
             />
             <figcaption className="border-t border-line px-4 py-3">
               <p className="font-[family-name:var(--font-playfair)] text-lg text-ink">
-                Gym squat
+                Barbell back squat
               </p>
               <p className="mt-0.5 text-xs tracking-wide text-muted">
-                Dumbbells · stand up from the hole
+                Sports bra · sweaty · stand up from the hole
               </p>
             </figcaption>
           </figure>

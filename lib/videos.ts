@@ -21,4 +21,11 @@ export const clips: Clip[] = [
     title: "Gym squat",
     note: "Dumbbells · stand up from the hole",
   },
+  {
+    id: "barbell-squat",
+    src: "/videos/barbell-squat.mp4",
+    poster: "/images/workout/wo-16-barbell-squat.jpg",
+    title: "Barbell back squat",
+    note: "Sports bra · sweaty · stand up",
+  },
 ];
