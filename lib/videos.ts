@@ -14,4 +14,11 @@ export const clips: Clip[] = [
     title: "Park walk",
     note: "Yellow sundress · tree-lined path",
   },
+  {
+    id: "gym-squat",
+    src: "/videos/gym-squat.mp4",
+    poster: "/images/workout/wo-11-squat-deep.jpg",
+    title: "Gym squat",
+    note: "Dumbbells · stand up from the hole",
+  },
 ];

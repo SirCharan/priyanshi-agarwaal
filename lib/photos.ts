@@ -418,6 +418,48 @@ export const workout: Photo[] = [
     place: "Outdoor · road bike",
     tag: "workout",
   },
+  {
+    id: "wo-10",
+    src: "/images/workout/wo-10-squat-stand.jpg",
+    title: "Squat stand",
+    place: "Top of the rep · dumbbells",
+    tag: "workout",
+  },
+  {
+    id: "wo-11",
+    src: "/images/workout/wo-11-squat-deep.jpg",
+    title: "Squat depth",
+    place: "Thighs parallel · dumbbells",
+    tag: "workout",
+  },
+  {
+    id: "wo-12",
+    src: "/images/workout/wo-12-boxing-jab.jpg",
+    title: "Boxing jab",
+    place: "Right hand · same gym",
+    tag: "workout",
+  },
+  {
+    id: "wo-13",
+    src: "/images/workout/wo-13-boxing-hook.jpg",
+    title: "Boxing hook",
+    place: "Weight shift · same gym",
+    tag: "workout",
+  },
+  {
+    id: "wo-14",
+    src: "/images/workout/wo-14-row-pull.jpg",
+    title: "Row pull",
+    place: "Handles to ribs",
+    tag: "workout",
+  },
+  {
+    id: "wo-15",
+    src: "/images/workout/wo-15-row-extend.jpg",
+    title: "Row extend",
+    place: "Start of the pull",
+    tag: "workout",
+  },
 ];
 
 /** Same yellow sundress, same public-park path — original stand plus five pose edits */
