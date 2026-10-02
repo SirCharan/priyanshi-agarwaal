@@ -1,0 +1,68 @@
+[
+ {
+  "id": "d1-1",
+  "image": "public/images/gen-02-cream-blazer.jpg",
+  "prompt": "A young Indian woman in a cream blazer looks up, breaks into a warm genuine smile at the camera, tucks her hair behind her ear and laughs softly, cafe window light, realistic natural motion, candid iPhone video, natural skin texture, subtle handheld camera.",
+  "seed": 7
+ },
+ {
+  "id": "d3-1",
+  "image": "public/images/gen-25-serious.jpg",
+  "prompt": "A young Indian woman stares seriously at the camera, then slowly cracks up laughing, shaking her head and covering her smile with her hand, realistic natural motion, candid iPhone video, natural skin texture, subtle handheld camera.",
+  "seed": 7
+ },
+ {
+  "id": "d4-1",
+  "image": "public/images/workout/wo-08-post-workout.jpg",
+  "prompt": "A young Indian woman after a workout laughs, wipes her forehead, then does a playful little shoulder shimmy dance at the camera, bright gym, realistic natural motion, candid iPhone video, natural skin texture, subtle handheld camera.",
+  "seed": 7
+ },
+ {
+  "id": "d6-1",
+  "image": "public/images/gen-33-walk.jpg",
+  "prompt": "A young Indian woman walks confidently toward the camera on a city street, hair swaying in the breeze, she smiles and glances sideways, realistic natural motion, candid iPhone video, natural skin texture, subtle handheld camera.",
+  "seed": 7
+ },
+ {
+  "id": "d7-1",
+  "image": "public/images/gen-10-plum-night.jpg",
+  "prompt": "A young Indian woman dances at a night party, swaying and moving her arms to the beat, laughing, flash photography lighting, city lights behind, realistic natural motion, candid iPhone video, natural skin texture, subtle handheld camera.",
+  "seed": 7
+ },
+ {
+  "id": "d2-1",
+  "image": "public/images/gen-41-yellow-34.jpg",
+  "prompt": "A young Indian woman in a yellow sundress dances playfully in a sunlit garden, swaying her hips and shoulders, laughing and smiling, hair bouncing, golden hour, realistic natural motion, candid iPhone video, natural skin texture, subtle handheld camera.",
+  "seed": 7
+ },
+ {
+  "id": "d2-2",
+  "image": "public/images/workout/wo-07-stretch-hoodie.jpg",
+  "prompt": "A young Indian woman stretches slowly and gracefully, raising her arms overhead, then relaxes and smiles calmly at the camera, soft morning light, realistic natural motion, candid iPhone video, natural skin texture, subtle handheld camera.",
+  "seed": 7
+ },
+ {
+  "id": "d2-3",
+  "image": "public/images/gen-13-laugh.jpg",
+  "prompt": "A young Indian woman laughs genuinely, throws her head back a little, then looks at the camera with a big smile, hair moving, realistic natural motion, candid iPhone video, natural skin texture, subtle handheld camera.",
+  "seed": 7
+ },
+ {
+  "id": "d5-1",
+  "image": "public/images/gen-35-window-lean.jpg",
+  "prompt": "A young Indian woman leaning by a window turns to the camera with a soft smile, then laughs and brushes her hair back, natural daylight, realistic natural motion, candid iPhone video, natural skin texture, subtle handheld camera.",
+  "seed": 7
+ },
+ {
+  "id": "d5-2",
+  "image": "public/images/gen-14-serene.jpg",
+  "prompt": "A young Indian woman with a serene expression slowly smiles, tilts her head, and gives a small playful wink at the camera, realistic natural motion, candid iPhone video, natural skin texture, subtle handheld camera.",
+  "seed": 7
+ },
+ {
+  "id": "d5-3",
+  "image": "public/images/gen-30-over-shoulder.jpg",
+  "prompt": "A young Indian woman looks back over her shoulder at the camera, smiles, then turns around fully with a little twirl, hair swinging, realistic natural motion, candid iPhone video, natural skin texture, subtle handheld camera.",
+  "seed": 7
+ }
+]
