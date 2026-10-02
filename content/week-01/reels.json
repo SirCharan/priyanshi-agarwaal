@@ -1,0 +1,420 @@
+[
+ {
+  "id": "d1-reel",
+  "format": "A",
+  "shots": [
+   {
+    "t": 0,
+    "dur": 6,
+    "still": "S03",
+    "motion": "She smirks at laptop glare, then slowly glances to camera and back; slow push-in."
+   }
+  ],
+  "overlays": [
+   {
+    "t": 0.3,
+    "dur": 5.4,
+    "text": "Working from a cafe is 10% work, 90% choosing the *table*",
+    "punch": "table"
+   }
+  ],
+  "music": "lo-fi house 100bpm, warm, soft kick",
+  "vo": null
+ },
+ {
+  "id": "d2-reel",
+  "format": "B",
+  "shots": [
+   {
+    "t": 0.0,
+    "dur": 2.5,
+    "still": "S25",
+    "motion": "Made bed, soft morning light; slow push-in."
+   },
+   {
+    "t": 2.5,
+    "dur": 2.5,
+    "still": "S11",
+    "motion": "Water bottle on mat, condensation beads; slow tilt down."
+   },
+   {
+    "t": 5.0,
+    "dur": 2.5,
+    "still": "S12",
+    "motion": "Grip socks and sneakers on floor; slow top-down drift."
+   },
+   {
+    "t": 7.5,
+    "dur": 2.5,
+    "still": "S09",
+    "motion": "Claw clip back of head; gentle push-in, hair sways."
+   },
+   {
+    "t": 10.0,
+    "dur": 2.5,
+    "still": "S10",
+    "motion": "She holds reformer exercise, trembling slightly; slow push-in."
+   },
+   {
+    "t": 12.5,
+    "dur": 2.5,
+    "still": "S08",
+    "motion": "She checks mirror, dewy glow, small smile; static, slight drift."
+   },
+   {
+    "t": 15.0,
+    "dur": 2.5,
+    "still": "S02",
+    "motion": "Hand lifts iced matcha, ice shifts; slow push-in."
+   },
+   {
+    "t": 17.5,
+    "dur": 2.5,
+    "still": "S01",
+    "motion": "She types on MacBook beside matcha; slow lateral drift."
+   },
+   {
+    "t": 20.0,
+    "dur": 2.5,
+    "still": "S05",
+    "motion": "Hand writes in notebook, phone beside; slow top-down push."
+   },
+   {
+    "t": 22.5,
+    "dur": 2.5,
+    "still": "S22",
+    "motion": "She walks street with tote, candid; camera follows slowly."
+   },
+   {
+    "t": 25.0,
+    "dur": 2.5,
+    "still": "S25",
+    "motion": "Bedroom darkens, lights go off; slow push-in on cropped bed."
+   },
+   {
+    "t": 27.5,
+    "dur": 2.5,
+    "still": "S25",
+    "motion": "Return to made bed, soft light; end card hold."
+   }
+  ],
+  "overlays": [
+   {
+    "t": 0.0,
+    "dur": 2.5,
+    "text": "My Sunday reset, minus the *5am* nonsense",
+    "punch": "5am"
+   },
+   {
+    "t": 2.5,
+    "dur": 2.5,
+    "text": "Wake up. *Water.* Not a personality.",
+    "punch": "Water"
+   },
+   {
+    "t": 5.0,
+    "dur": 2.5,
+    "text": "Gear first. *Motivation* later.",
+    "punch": "Motivation"
+   },
+   {
+    "t": 7.5,
+    "dur": 2.5,
+    "text": "Claw clip is the *dress* code",
+    "punch": "dress"
+   },
+   {
+    "t": 10.0,
+    "dur": 2.5,
+    "text": "Class: 45 minutes of *shaking*",
+    "punch": "shaking"
+   },
+   {
+    "t": 12.5,
+    "dur": 2.5,
+    "text": "Post-class legs are a *rumour*",
+    "punch": "rumour"
+   },
+   {
+    "t": 15.0,
+    "dur": 2.5,
+    "text": "Matcha is *mandatory*",
+    "punch": "mandatory"
+   },
+   {
+    "t": 17.5,
+    "dur": 2.5,
+    "text": "One *gentle* hour of work",
+    "punch": "gentle"
+   },
+   {
+    "t": 20.0,
+    "dur": 2.5,
+    "text": "Plan the week. *Lightly.*",
+    "punch": "Lightly"
+   },
+   {
+    "t": 22.5,
+    "dur": 2.5,
+    "text": "Groceries, because *adulting*",
+    "punch": "adulting"
+   },
+   {
+    "t": 25.0,
+    "dur": 2.5,
+    "text": "Lights off by *ten*",
+    "punch": "ten"
+   },
+   {
+    "t": 27.5,
+    "dur": 2.5,
+    "text": "*Save* for next Sunday",
+    "punch": "Save"
+   }
+  ],
+  "music": "soft lo-fi house 100bpm, warm, light percussion, gentle build to end",
+  "vo": "Sunday reset, minus the five a.m. nonsense. Water first. Gear by the door. Claw clip, obviously. Then forty-five minutes of shaking that I paid for. Legs are a rumour afterwards. Matcha, laptop, one gentle hour. Plan the week lightly, buy groceries like an adult, lights out by ten. Save this for next Sunday."
+ },
+ {
+  "id": "d3-reel",
+  "format": "A",
+  "shots": [
+   {
+    "t": 0,
+    "dur": 6,
+    "still": "S25",
+    "motion": "She stares at laptop, one slow blink, sleepy; gentle push-in."
+   }
+  ],
+  "overlays": [
+   {
+    "t": 0.3,
+    "dur": 5.4,
+    "text": "Monday is just Sunday's *villain* origin story",
+    "punch": "villain"
+   }
+  ],
+  "music": "dreamy lo-fi hip hop 80bpm, mellow",
+  "vo": null
+ },
+ {
+  "id": "d4-reel",
+  "format": "A",
+  "shots": [
+   {
+    "t": 0,
+    "dur": 6,
+    "still": "S08",
+    "motion": "She fixes claw clip in mirror, winks, drops hand; static camera, slight drift."
+   }
+  ],
+  "overlays": [
+   {
+    "t": 0.3,
+    "dur": 5.4,
+    "text": "Gym is 5% workout, 95% *convincing* myself to go",
+    "punch": "convincing"
+   }
+  ],
+  "music": "chill pop-house 105bpm, light and bouncy",
+  "vo": null
+ },
+ {
+  "id": "d5-reel",
+  "format": "B",
+  "shots": [
+   {
+    "t": 0.0,
+    "dur": 2.5,
+    "still": "S01",
+    "motion": "She types at concrete-wall cafe desk; slow push-in."
+   },
+   {
+    "t": 2.5,
+    "dur": 2.5,
+    "still": "S04",
+    "motion": "She walks through doorway with tote; camera follows slowly."
+   },
+   {
+    "t": 5.0,
+    "dur": 2.5,
+    "still": "S05",
+    "motion": "Hand writes in notebook beside phone; slow top-down drift."
+   },
+   {
+    "t": 7.5,
+    "dur": 2.5,
+    "still": "S06",
+    "motion": "She looks out window seat, light glows; slow push-in."
+   },
+   {
+    "t": 10.0,
+    "dur": 2.5,
+    "still": "S02",
+    "motion": "Hand lifts iced matcha, ice shifts; slow push-in."
+   },
+   {
+    "t": 12.5,
+    "dur": 2.5,
+    "still": "S03",
+    "motion": "She smirks at laptop glare, side profile; slow push-in."
+   },
+   {
+    "t": 15.0,
+    "dur": 2.5,
+    "still": "S07",
+    "motion": "She points at counter menu, turns; slow lateral drift."
+   },
+   {
+    "t": 17.5,
+    "dur": 2.5,
+    "still": "S04",
+    "motion": "She steps through doorway again; slow push-in."
+   },
+   {
+    "t": 20.0,
+    "dur": 2.5,
+    "still": "S06",
+    "motion": "Window light shifts across her face; slow push-in."
+   },
+   {
+    "t": 22.5,
+    "dur": 2.5,
+    "still": "S03",
+    "motion": "She types, glare on screen; slow push-in."
+   },
+   {
+    "t": 25.0,
+    "dur": 2.5,
+    "still": "S05",
+    "motion": "Notebook page, pen taps; slow top-down push."
+   },
+   {
+    "t": 27.5,
+    "dur": 2.5,
+    "still": "S01",
+    "motion": "Return to desk wide shot; end card hold."
+   }
+  ],
+  "overlays": [
+   {
+    "t": 0.0,
+    "dur": 2.5,
+    "text": "3 Indiranagar cafes where you can actually *work*",
+    "punch": "work"
+   },
+   {
+    "t": 2.5,
+    "dur": 2.5,
+    "text": "Cafe 1: seat, plugs, *quiet*",
+    "punch": "quiet"
+   },
+   {
+    "t": 5.0,
+    "dur": 2.5,
+    "text": "Table big enough for a *notebook*",
+    "punch": "notebook"
+   },
+   {
+    "t": 7.5,
+    "dur": 2.5,
+    "text": "Cafe 2: natural light, *2pm* sweet spot",
+    "punch": "2pm"
+   },
+   {
+    "t": 10.0,
+    "dur": 2.5,
+    "text": "Matcha game: *strong*",
+    "punch": "strong"
+   },
+   {
+    "t": 12.5,
+    "dur": 2.5,
+    "text": "Cafe 3: corner seat, good for *calls*",
+    "punch": "calls"
+   },
+   {
+    "t": 15.0,
+    "dur": 2.5,
+    "text": "Order fast. *Stay* long.",
+    "punch": "Stay"
+   },
+   {
+    "t": 17.5,
+    "dur": 2.5,
+    "text": "Cafe 1 verdict: *work* mode",
+    "punch": "work"
+   },
+   {
+    "t": 20.0,
+    "dur": 2.5,
+    "text": "Cafe 2 verdict: *vibes* mode",
+    "punch": "vibes"
+   },
+   {
+    "t": 22.5,
+    "dur": 2.5,
+    "text": "Cafe 3 verdict: *calls* mode",
+    "punch": "calls"
+   },
+   {
+    "t": 25.0,
+    "dur": 2.5,
+    "text": "Wifi rating: bring a *hotspot*",
+    "punch": "hotspot"
+   },
+   {
+    "t": 27.5,
+    "dur": 2.5,
+    "text": "*Save* before your next deadline",
+    "punch": "Save"
+   }
+  ],
+  "music": "upbeat lo-fi house 104bpm, light and productive",
+  "vo": "Three Indiranagar cafes where you can actually work. One: seat, plugs, quiet. Two: window light, best around two p.m. Three: corner seat, good for calls. Order fast, stay long. Names are in the caption. Save this before your next deadline."
+ },
+ {
+  "id": "d6-reel",
+  "format": "A",
+  "shots": [
+   {
+    "t": 0,
+    "dur": 6,
+    "still": "S24",
+    "motion": "She gazes out auto window, exhales a sigh, sunset light shifts; slow push-in."
+   }
+  ],
+  "overlays": [
+   {
+    "t": 0.3,
+    "dur": 5.4,
+    "text": "Bangalore: 4 km, 55 minutes, a full *personality* change",
+    "punch": "personality"
+   }
+  ],
+  "music": "mellow lo-fi 85bpm with soft vinyl crackle",
+  "vo": null
+ },
+ {
+  "id": "d7-reel",
+  "format": "A",
+  "shots": [
+   {
+    "t": 0,
+    "dur": 6,
+    "still": "S13",
+    "motion": "She glances at flash camera over martini, smirks, looks away; slight handheld push-in."
+   }
+  ],
+  "overlays": [
+   {
+    "t": 0.3,
+    "dur": 5.4,
+    "text": "Friday me has no idea *Monday* me exists",
+    "punch": "Monday"
+   }
+  ],
+  "music": "deep-house groove 118bpm, nightlife, glossy",
+  "vo": null
+ }
+]

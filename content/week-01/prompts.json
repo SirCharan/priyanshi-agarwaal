@@ -1,0 +1,214 @@
+[
+ {
+  "id": "S01",
+  "aspect": "4:5",
+  "used_by": [
+   "d1-s2",
+   "d2-reel",
+   "d5-reel"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Wide shot at an Indiranagar cafe: she sits at a small table against a raw concrete wall, wearing an oatmeal linen blazer, typing on a MacBook that shows a blurred document, an iced matcha beside it. Unposed focused expression, soft window light with golden-hour rim light. candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain, high-end minimalist street fashion. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S02",
+  "aspect": "9:16",
+  "used_by": [
+   "d1-s1",
+   "d2-reel",
+   "d2-car",
+   "d5-reel",
+   "d7-s1"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Close-up of her hand holding a tall iced matcha, gold hoops visible at the edge of frame, cuff of an oatmeal linen blazer showing, condensation on the glass, cafe blurred behind. Warm golden-hour rim light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain, minimalist street fashion. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S03",
+  "aspect": "9:16",
+  "used_by": [
+   "d1-reel",
+   "d5-reel",
+   "d6-s2"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Medium side profile in a cafe: she wears an oatmeal linen blazer and gives a small private smirk at a laptop whose screen glare hides the display. Gold hoop catches the light, unposed candid expression, golden-hour rim light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S04",
+  "aspect": "9:16",
+  "used_by": [
+   "d5-s1",
+   "d5-reel"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Full body, she walks through a cafe doorway in an oatmeal linen blazer, wide trousers and a canvas tote on her shoulder, glancing sideways mid-step, bright street behind her. Unposed, golden-hour rim light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain, high-end minimalist street fashion. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S05",
+  "aspect": "4:5",
+  "used_by": [
+   "d2-reel",
+   "d5-reel"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Top-down over-shoulder view at a cafe table: her hand in a linen blazer sleeve writes in an open notebook with a to-do list of blurred scribbles, phone lying beside it with a dark screen, coffee cup edge in frame. Gold hoop barely visible. Soft golden-hour rim light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S06",
+  "aspect": "4:5",
+  "used_by": [
+   "d5-reel",
+   "d5-s3"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Medium shot at a cafe window seat: she wears an oatmeal linen blazer and gazes out at the street, chin resting lightly on her hand, a matcha on the sill. Soft daylight with golden-hour rim light on her curtain bangs, unposed candid expression, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S07",
+  "aspect": "9:16",
+  "used_by": [
+   "d3-s2",
+   "d5-reel"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Medium shot at a cafe counter: she wears an oatmeal linen blazer and points up at a blurred menu board, playful half-smile, barista blurred behind. Gold hoops visible, warm interior light with golden-hour rim light from the door, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain, minimalist street fashion. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S08",
+  "aspect": "9:16",
+  "used_by": [
+   "d2-s1",
+   "d2-reel",
+   "d2-car",
+   "d4-reel"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Waist-up mirror selfie in a pilates studio, holding an iPhone, wearing a sage green matching sports set with her hair in a claw clip, dewy post-class skin, flushed cheeks, natural flyaways. Soft studio light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain, athleisure. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S09",
+  "aspect": "4:5",
+  "used_by": [
+   "d2-reel",
+   "d2-car",
+   "d4-s3"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Close-up from behind: the back of her head showing a tortoiseshell claw clip holding her hair, gold hoop visible at the ear, sage green sports top at the shoulder, pilates studio blurred beyond. Natural neck skin texture, flyaway strands, soft golden-hour rim light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S10",
+  "aspect": "9:16",
+  "used_by": [
+   "d2-reel",
+   "d2-car"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Full body in a bright pilates studio: she sits on a reformer in a sage green matching set, mid-exercise with legs extended and arms straining, focused, slightly shaky effort on her face, hair in a claw clip. Unposed, soft window light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S11",
+  "aspect": "4:5",
+  "used_by": [
+   "d2-s2",
+   "d2-car"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Flatlay on a studio floor: a rolled sage green pilates mat, a steel water bottle with condensation and a small towel, with her hand with gold ring entering the frame. Soft side light with golden-hour rim light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain, minimalist wellness aesthetic. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S12",
+  "aspect": "4:5",
+  "used_by": [
+   "d4-s1",
+   "d2-car"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Top-down flatlay of pilates gear on a light wooden floor: cream grip socks with grippy dots, white sneakers, a claw clip, a sage green top and a phone face-down. Gold hoops resting beside them. Soft golden-hour rim light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S13",
+  "aspect": "9:16",
+  "used_by": [
+   "d7-reel"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Waist-up on a rooftop at night: she wears a black silk top and glances at the camera with an espresso martini in hand, gold hoops catching the light, city lights blurred behind. direct on-camera flash, slight shine on skin, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain, unposed candid expression. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S14",
+  "aspect": "9:16",
+  "used_by": [
+   "d1-s3"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Medium shot on a rooftop at night: she wears a black silk top and laughs openly at someone off-frame, head tilted, eyes crinkled, glass in hand. direct on-camera flash with warm city bokeh behind, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain, unposed candid expression. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S15",
+  "aspect": "4:5",
+  "used_by": [
+   "d7-s3"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Close-up of her hand holding a coupe glass of espresso martini on a rooftop at night, black silk sleeve and a gold ring visible, city lights as soft bokeh. direct on-camera flash, glints on the glass, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S18",
+  "aspect": "4:5",
+  "used_by": [
+   "d5-car"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Medium shot on a sunny Goa balcony: she wears a white linen shirt dress, seated with an iPad showing a blurred travel itinerary and map, palm trees behind. She looks down, relaxed. Unposed candid expression, golden-hour rim light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S19",
+  "aspect": "9:16",
+  "used_by": [
+   "d5-car"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Wide shot on a Goa balcony: she sits with bare feet up on the railing, wearing a white linen shirt dress, palm trees and a hazy sky behind, a book beside her. Relaxed, unposed, golden-hour rim light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain, high-end minimalist style. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S20",
+  "aspect": "4:5",
+  "used_by": [
+   "d5-car"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Close-up of a ceramic coffee cup on a Goa balcony rail, her hand in a white linen shirt dress sleeve wrapped around it, gold ring visible, palms and soft sea haze behind. Warm morning golden-hour rim light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S21",
+  "aspect": "4:5",
+  "used_by": [
+   "d5-s2",
+   "d5-car"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Medium shot in a Goa hotel room: she wears a casual cream linen set and stands over an open suitcase on the bed, holding two folded outfits, undecided with a funny squint. Unposed, soft daylight, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S22",
+  "aspect": "9:16",
+  "used_by": [
+   "d2-reel",
+   "d7-s2"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Full body candid walk on a Bandra street: she wears an oversized white shirt, relaxed jeans and sneakers with a small bag, mid-stride, looking away from the camera, street and trees blurred. Late-day golden-hour rim light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain, high-end minimalist street fashion. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S23",
+  "aspect": "4:5",
+  "used_by": [
+   "d4-s2"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Medium shot in a Koramangala bookstore: she wears a cream knit top and browses a shelf, holding one paperback with the cover turned away, curious half-smile. Gold hoops visible, warm interior light with golden-hour rim light through a window, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S24",
+  "aspect": "9:16",
+  "used_by": [
+   "d6-s1",
+   "d6-reel",
+   "d6-s3"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Medium shot inside a Bangalore auto-rickshaw at sunset: she wears an oatmeal linen blazer and looks out the open side with a faint sigh, wind moving her curtain bangs, gold hoop glinting. Blurred traffic behind, golden-hour rim light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ },
+ {
+  "id": "S25",
+  "aspect": "9:16",
+  "used_by": [
+   "d2-reel",
+   "d2-s3",
+   "d3-s1",
+   "d3-reel",
+   "d3-s3"
+  ],
+  "prompt": "Image 1 is the face reference and image 2 the body reference of the same woman. Generate a NEW photo of this exact same woman (identical face, curtain bangs, gold hoops, warm tan skin, 165 cm). Medium shot in a bedroom: she wears an oversized grey tee and sits against pillows on a messy unmade bed, a laptop on her knees angled away, sleepy blank stare toward camera, tousled hair. Soft morning light, candid iPhone 16 Pro photo, raw skin texture with natural pores, subtle flyaway hair, subtle 35mm film grain. Not plastic skin, not airbrushed, not doll-like, not cartoon, not oversaturated, not symmetrical render, not 3D CGI, no text, no watermark."
+ }
+]

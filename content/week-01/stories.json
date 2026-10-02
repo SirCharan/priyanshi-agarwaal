@@ -1,0 +1,149 @@
+[
+ {
+  "id": "d1-s1",
+  "at": "2026-10-03T08:30:00+05:30",
+  "still": "S02",
+  "text": "hi. matcha first. questions later.",
+  "position": "bottom"
+ },
+ {
+  "id": "d1-s2",
+  "at": "2026-10-03T13:30:00+05:30",
+  "still": "S03",
+  "text": "tonight's reel is too real. 6:30",
+  "position": "top"
+ },
+ {
+  "id": "d1-s3",
+  "at": "2026-10-03T21:30:00+05:30",
+  "still": "S14",
+  "text": "saturday plan: leave the house. done.",
+  "position": "bottom"
+ },
+ {
+  "id": "d2-s1",
+  "at": "2026-10-04T08:30:00+05:30",
+  "still": "S08",
+  "text": "sunday reset starts at 8. allegedly.",
+  "position": "top"
+ },
+ {
+  "id": "d2-s2",
+  "at": "2026-10-04T13:30:00+05:30",
+  "still": "S11",
+  "text": "legs are a rumour. reel at 6:30",
+  "position": "bottom"
+ },
+ {
+  "id": "d2-s3",
+  "at": "2026-10-04T21:30:00+05:30",
+  "still": "S25",
+  "text": "monday, you can wait.",
+  "position": "top"
+ },
+ {
+  "id": "d3-s1",
+  "at": "2026-10-05T08:30:00+05:30",
+  "still": "S25",
+  "text": "monday has entered the chat",
+  "position": "top"
+ },
+ {
+  "id": "d3-s2",
+  "at": "2026-10-05T13:30:00+05:30",
+  "still": "S07",
+  "text": "one iced matcha per deadline",
+  "position": "bottom"
+ },
+ {
+  "id": "d3-s3",
+  "at": "2026-10-05T21:30:00+05:30",
+  "still": "S25",
+  "text": "survived. barely. reply with your monday mood",
+  "position": "top"
+ },
+ {
+  "id": "d4-s1",
+  "at": "2026-10-06T08:30:00+05:30",
+  "still": "S12",
+  "text": "booked a class so i can't back out",
+  "position": "top"
+ },
+ {
+  "id": "d4-s2",
+  "at": "2026-10-06T13:30:00+05:30",
+  "still": "S23",
+  "text": "bought a book. will read page 1.",
+  "position": "bottom"
+ },
+ {
+  "id": "d4-s3",
+  "at": "2026-10-06T21:30:00+05:30",
+  "still": "S09",
+  "text": "sore. smug. both.",
+  "position": "bottom"
+ },
+ {
+  "id": "d5-s1",
+  "at": "2026-10-07T08:30:00+05:30",
+  "still": "S04",
+  "text": "scouting cafes today. for science.",
+  "position": "top"
+ },
+ {
+  "id": "d5-s2",
+  "at": "2026-10-07T13:30:00+05:30",
+  "still": "S21",
+  "text": "packing is a personality test",
+  "position": "bottom"
+ },
+ {
+  "id": "d5-s3",
+  "at": "2026-10-07T21:30:00+05:30",
+  "still": "S06",
+  "text": "wifi 4/5. chairs 5/5. reply with yours",
+  "position": "bottom"
+ },
+ {
+  "id": "d6-s1",
+  "at": "2026-10-08T08:30:00+05:30",
+  "still": "S24",
+  "text": "leaving early to be late anyway",
+  "position": "top"
+ },
+ {
+  "id": "d6-s2",
+  "at": "2026-10-08T13:30:00+05:30",
+  "still": "S24",
+  "text": "tonight's reel: bangalore traffic. 6:30",
+  "position": "bottom"
+ },
+ {
+  "id": "d6-s3",
+  "at": "2026-10-08T21:30:00+05:30",
+  "still": "S24",
+  "text": "reached. emotionally, not yet.",
+  "position": "top"
+ },
+ {
+  "id": "d7-s1",
+  "at": "2026-10-09T08:30:00+05:30",
+  "still": "S02",
+  "text": "friday energy: 60% hope",
+  "position": "bottom"
+ },
+ {
+  "id": "d7-s2",
+  "at": "2026-10-09T13:30:00+05:30",
+  "still": "S22",
+  "text": "reply with tonight's outfit. i have no idea",
+  "position": "top"
+ },
+ {
+  "id": "d7-s3",
+  "at": "2026-10-09T21:30:00+05:30",
+  "still": "S15",
+  "text": "see you next week. probably.",
+  "position": "top"
+ }
+]
